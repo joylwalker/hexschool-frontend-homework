@@ -1,0 +1,330 @@
+/* Reusable */
+html {
+  font-size: 62.5%; /* 10px / 16px = 0.652 => 1rem = 10px */
+}
+
+body {
+  color: #212529;
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+
+  /* 讓footer擠到網頁底部，不要懸空 */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 129.6rem;
+  margin: 0 auto;
+}
+
+.page-link a {
+  color: #212529;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 1.2rem 0;
+}
+
+/* nav */
+nav {
+  width: 100%;
+  height: 8rem;
+  padding: 1.6rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  width: 35.1rem;
+  height: 4.8rem;
+  display: flex;
+}
+
+.logo-link img {
+  width: 10.5rem;
+  height: 3rem;
+  padding: 0.8rem 1.2rem;
+  margin-right: 4.8rem;
+}
+
+.page-link {
+  display: flex;
+}
+
+.page-link a {
+  width: 6.7rem;
+  height: 2.4rem;
+}
+
+.page-link a:last-child {
+  margin-left: 4rem;
+}
+
+.btn-wrapper {
+  margin-left: auto;
+}
+
+.btn-icon {
+  padding: 1.2rem;
+}
+
+/* breadcrumb */
+.breadcrumb {
+  width: 13.1rem;
+  height: 2.4rem;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  font-weight: 500;
+  margin-top: 3.2rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumb-item a {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+.breadcrumb-item.active a {
+  color: #212529;
+}
+
+.breadcrumb-item:not(:last-child)::after {
+  content: "/";
+  width: 0.7rem;
+  height: 2.4rem;
+  color: #dee2e6;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+  margin: 0 1.2rem;
+}
+
+/* title */
+.title {
+  height: 4.8rem;
+  margin-top: 2.4rem;
+}
+
+.title h3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  padding: 0.7rem 0;
+}
+
+/* main-layout */
+.main-layout {
+  margin-top: 2.4rem;
+  display: grid;
+  grid-template-columns: 19.6rem 1fr;
+  column-gap: 2.4rem;
+}
+/* 左側邊欄 */
+.sidebar ul {
+  list-style: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.sidebar ul li {
+  padding: 1.2rem 0;
+  margin-bottom: 1.6rem;
+}
+
+.sidebar .active {
+  color: #57a203;
+  padding: 0.8rem 0;
+}
+
+/* 右側商品區 */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2.4rem;
+  row-gap: 4.8rem;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.product-img {
+  width: 100%;
+}
+
+.product-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-top: 1.2rem;
+}
+
+.product-price {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-top: 0.4rem;
+}
+
+/* pagination */
+.pagination {
+  height: 4rem;
+  padding: 0;
+  margin-top: 4.8rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.pagination-numbers {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.page-btn,
+.page-ellipsis {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  border: none;
+  cursor: pointer;
+}
+
+.page-btn {
+  background-color: transparent;
+  color: #212529;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  border: none;
+  cursor: pointer;
+}
+
+.page-btn.active {
+  background-color: #c0fa73;
+}
+
+.btn-icon-left {
+  color: #6c757d;
+}
+
+.btn-icon-right {
+  color: #212529;
+}
+
+/* cta */
+.cta {
+  width: 100%;
+  margin-top: 3.2rem;
+  padding-top: 4.8rem;
+}
+
+.banner {
+  background-color: #e8fec5;
+  width: 100%;
+  height: 9.6rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.banner p {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.btn--cta {
+  background-color: #212529;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0.8rem;
+}
+
+/* footer */
+.site-footer {
+  background-color: #f8f9fa;
+  width: 100%;
+}
+
+.site-footer nav {
+  display: flex;
+  padding: 0;
+}
+
+.site-footer .logo-link {
+  width: 100%;
+  height: 4.8rem;
+  margin-top: 6.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.page-link {
+  display: flex;
+  gap: 4rem;
+  margin-left: auto;
+}
+
+.site-footer .page-link a:last-child {
+  margin: 0;
+}
+
+.logo img {
+  margin: 0;
+}
+
+.copyright {
+  padding-top: 3.2rem;
+  margin: 2.4rem 0 6.4rem 0;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.copyright p {
+  color: #6c757d;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
