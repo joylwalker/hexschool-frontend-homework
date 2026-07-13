@@ -1,0 +1,217 @@
+/* rem and em don't depend on html font-sizein media queries!
+Instead, 1rem  = 1em =16px */
+
+/***************************/
+/* BELOW 375px (Smaller cellphone) */
+/***************************/
+@media (max-width: 23.5em) {
+  .container {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.2rem;
+  }
+
+  /* Header Nav */
+  .site-header nav {
+    padding: 1.3rem 0;
+  }
+
+  .logo-link {
+    width: auto;
+  }
+
+  .site-header .page-link {
+    display: none;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    height: 24rem;
+  }
+
+  .hero-img {
+    height: 24rem;
+  }
+
+  .page-title h1 {
+    font-size: 2.8rem;
+  }
+
+  .page-title h3 {
+    font-size: 2rem;
+  }
+
+  /* Block-quote */
+  .block-quote {
+    width: auto;
+    margin: 3.2rem 1.2rem;
+    padding: 2.4rem;
+    border-radius: 0.4rem;
+    text-align: left;
+  }
+
+  .block-quote h5 {
+    margin-bottom: 1.2rem;
+  }
+
+  .block-quote p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* 品牌簡介 */
+  .brand-intro {
+    margin-bottom: 3.2rem;
+  }
+
+  .main-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .brand-intro__content {
+    padding-top: 1.6rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .brand-intro-title {
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .brand-intro h5 {
+    margin-bottom: 1.2rem;
+  }
+
+  .brand-slogan {
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .border-bottom {
+    padding-bottom: 3.2rem;
+  }
+
+  /* 品牌歷程 */
+  .brand-history {
+    margin-bottom: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
+
+  .brand-history-title {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+  }
+
+  .brand-history ol li {
+    line-height: 1.5;
+  }
+
+  .brand-history li:last-child {
+    padding-bottom: 0;
+  }
+
+  /* 品牌理念 */
+  .brand-concept {
+    padding-top: 0;
+    margin-bottom: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
+
+  .brand-concept-title {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+  }
+
+  .brand-concept li {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  .brand-concept li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* 品牌小故事 */
+  .brand-side-story {
+    padding-top: 0;
+    margin-bottom: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
+
+  .brand-side-story-title {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1.6rem;
+  }
+
+  /* cta */
+  .cta {
+    width: 100%;
+    /* height: auto; */
+    padding-top: 0;
+  }
+
+  .banner {
+    height: 8.8rem;
+    gap: 1.6rem;
+  }
+
+  .banner p {
+    font-size: 2rem;
+  }
+
+  .btn--cta {
+    padding: 0.8rem 1.6rem;
+  }
+
+  .btn--cta:hover {
+    background-color: #495057;
+  }
+
+  /* footer */
+  .site-footer {
+    padding: 3.2rem 0;
+  }
+
+  .site-footer nav {
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .site-footer .logo-link {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .site-footer .logo {
+    padding: 0.8rem 0;
+  }
+
+  .site-footer .logo img {
+    width: 10.5rem;
+    height: 3rem;
+    padding: 0;
+  }
+
+  .site-footer .page-link {
+    margin: 0;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-left: 1.2rem;
+  }
+
+  .site-footer .page-link a {
+    padding-top: 1.2rem;
+  }
+
+  .copyright {
+    margin-bottom: 0;
+  }
+}
