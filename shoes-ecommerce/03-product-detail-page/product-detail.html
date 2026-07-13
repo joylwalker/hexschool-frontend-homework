@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>第二堂－鞋子電商｜產品詳情頁</title>
-    <link rel="stylesheet" href="product-detail.css" />
-    <link rel="stylesheet" href="normalized.css" />
+    <link rel="stylesheet" href="../normalize.css" />
+    <link rel="stylesheet" href="./product-detail.css" />
+    <link rel="stylesheet" href="./queries.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,13 +21,17 @@
           <div class="logo-link">
             <div class="logo">
               <a href="#">
-                <img src="./img/logo.svg" alt="URBNSTEP Logo" />
+                <img src="../img/logo.svg" alt="URBNSTEP Logo" />
               </a>
             </div>
-            <div class="page-link">
-              <a href="#">商品列表</a>
-              <a href="#">品牌故事</a>
-            </div>
+            <ul class="page-link">
+              <li>
+                <a href="../02-product-list-page/product-list.html">商品列表</a>
+              </li>
+              <li>
+                <a href="../01-brand-story-page/index.html">品牌故事</a>
+              </li>
+            </ul>
           </div>
 
           <div class="btn-wrapper">
@@ -40,7 +45,7 @@
             >
               <path
                 d="M8 8C8.79565 8 9.55871 7.68393 10.1213 7.12132C10.6839 6.55871 11 5.79565 11 5C11 4.20435 10.6839 3.44129 10.1213 2.87868C9.55871 2.31607 8.79565 2 8 2C7.20435 2 6.44129 2.31607 5.87868 2.87868C5.31607 3.44129 5 4.20435 5 5C5 5.79565 5.31607 6.55871 5.87868 7.12132C6.44129 7.68393 7.20435 8 8 8ZM10 5C10 5.53043 9.78929 6.03914 9.41421 6.41421C9.03914 6.78929 8.53043 7 8 7C7.46957 7 6.96086 6.78929 6.58579 6.41421C6.21071 6.03914 6 5.53043 6 5C6 4.46957 6.21071 3.96086 6.58579 3.58579C6.96086 3.21071 7.46957 3 8 3C8.53043 3 9.03914 3.21071 9.41421 3.58579C9.78929 3.96086 10 4.46957 10 5ZM14 13C14 14 13 14 13 14H3C3 14 2 14 2 13C2 12 3 9 8 9C13 9 14 12 14 13ZM13 12.996C12.999 12.75 12.846 12.01 12.168 11.332C11.516 10.68 10.289 10 8 10C5.71 10 4.484 10.68 3.832 11.332C3.154 12.01 3.002 12.75 3 12.996H13Z"
-                fill="#212529"
+                fill="currentColor"
               />
             </svg>
           </div>
@@ -58,56 +63,56 @@
               <li class="product-gallery__item">
                 <img
                   class="product-gallery__img"
-                  src="./img/image.png"
+                  src="../img/image.png"
                   alt="Platform 404"
                 />
               </li>
               <li class="product-gallery__item">
                 <img
                   class="product-gallery__img"
-                  src="./img/image-1.png"
+                  src="../img/image-1.png"
                   alt="Platform 404"
                 />
               </li>
               <li class="product-gallery__item">
                 <img
                   class="product-gallery__img"
-                  src="./img/image-2.png"
+                  src="../img/image-2.png"
                   alt="Platform 404"
                 />
               </li>
               <li class="product-gallery__item">
                 <img
                   class="product-gallery__img"
-                  src="./img/image-3.png"
+                  src="../img/image-3.png"
                   alt="Platform 404"
                 />
               </li>
               <li class="product-gallery__item">
                 <img
                   class="product-gallery__img"
-                  src="./img/image-4.png"
+                  src="../img/image-4.png"
                   alt="Platform 404"
                 />
               </li>
               <li class="product-gallery__item">
                 <img
                   class="product-gallery__img"
-                  src="./img/image-5.png"
+                  src="../img/image-5.png"
                   alt="Platform 404"
                 />
               </li>
               <li class="product-gallery__item">
                 <img
                   class="product-gallery__img"
-                  src="./img/image-6.png"
+                  src="../img/image-6.png"
                   alt="Platform 404"
                 />
               </li>
               <li class="product-gallery__item">
                 <img
                   class="product-gallery__img"
-                  src="./img/image-7.png"
+                  src="../img/image-7.png"
                   alt="Platform 404"
                 />
               </li>
@@ -147,11 +152,11 @@
               </div>
               <div class="product-selector__options">
                 <button class="product-selector__btn">
-                  <img src="./img/image.png" alt="藍色" />
+                  <img src="../img/image.png" alt="藍色" />
                   <span>藍色</span>
                 </button>
                 <button class="product-selector__btn">
-                  <img src="./img/product-1.png" alt="卡其色" />
+                  <img src="../img/product-1.png" alt="卡其色" />
                   <span>卡其色</span>
                 </button>
               </div>
@@ -160,7 +165,7 @@
               <div class="product-selector__size">
                 <span class="product-selector__label">尺寸</span>
                 <div class="product-selector__options">
-                  <button class="product-selector__btn--size active">
+                  <button class="product-selector__btn--size">
                     35(22.5cm)
                   </button>
                   <button class="product-selector__btn--size">
@@ -189,8 +194,10 @@
             </div>
             <!-- product-actions: 加入收藏、門市試穿 -->
             <div class="product-actions">
-              <button class="btn btn--outline">
+              <button class="btn btn--fav">
+                <!-- 預設顯示（加入收藏） -->
                 <svg
+                  class="icon-outline"
                   width="20"
                   height="20"
                   viewBox="0 0 20 19"
@@ -202,11 +209,38 @@
                     fill="currentColor"
                   />
                 </svg>
-                <span>加入收藏</span>
+                <span class="text-default">加入收藏</span>
+
+                <!-- 預設隱藏 -->
+                <!-- active狀態（已收藏） -->
+                <svg
+                  class="icon-solid"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_37550_1032)">
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M9.99973 1.64256C15.5472 -4.05994 29.4172 5.91881 9.99973 18.7501C-9.41777 5.92006 4.45223 -4.05994 9.99973 1.64256Z"
+                      fill="currentColor"
+                    />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_37550_1032">
+                      <rect width="20" height="20" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <span class="text-active">已收藏</span>
               </button>
 
               <button class="btn btn--primary">
                 <svg
+                  class="shopping-bag"
                   width="20"
                   height="20"
                   viewBox="0 0 18 20"
@@ -222,19 +256,19 @@
               </button>
             </div>
             <!-- product-details-list: 商品材質、購買須知、保養方式 -->
-            <div class="product-details-list">
-              <div class="details-item">
-                <p class="details-item__title">商品材質</p>
+            <ul class="product-details-list">
+              <li class="details-item">
+                <h3 class="details-item__title">商品材質</h3>
                 <ul class="details-item__list">
                   <li>鞋面：合成皮革（Synthetic Leather）</li>
                   <li>內裡：透氣網布材質，提升舒適與排汗性</li>
                   <li>鞋底：EVA輕量發泡橡膠，具備良好緩震與止滑效果</li>
                   <li>鞋帶：聚酯纖維，耐拉扯不易鬆脫</li>
                 </ul>
-              </div>
+              </li>
 
-              <div class="details-item">
-                <p class="details-item__title">購買須知</p>
+              <li class="details-item">
+                <h3 class="details-item__title">購買須知</h3>
                 <ul class="details-item__list">
                   <li>商品顏色因螢幕顯示可能略有差異，請以實品為準。</li>
                   <li>建議首次穿著前試穿確認尺寸，避免影響退換貨權益。</li>
@@ -242,10 +276,10 @@
                     本商品為限量發售，庫存有限，如需更換尺寸請儘早聯繫客服協助處理。
                   </li>
                 </ul>
-              </div>
+              </li>
 
-              <div class="details-item">
-                <p class="details-item__title">保養方式</p>
+              <li class="details-item">
+                <h3 class="details-item__title">保養方式</h3>
                 <ul class="details-item__list">
                   <li>
                     建議以乾布或微濕軟布擦拭表面汙漬，避免機洗或長時間浸水。
@@ -257,8 +291,8 @@
                     若需深層清潔，建議使用中性清潔劑並搭配柔刷輕刷，勿使用漂白水或強酸強鹼清潔劑。
                   </li>
                 </ul>
-              </div>
-            </div>
+              </li>
+            </ul>
           </section>
         </div>
       </section>
@@ -268,47 +302,55 @@
       <div class="recommend-products__content container">
         <h4 class="recommend-products__title">你可能也喜歡...</h4>
         <!-- 商品卡片 -->
-        <div class="product-card-grid">
-          <article class="product-card">
-            <div class="product-card__img">
-              <img src="./img/product-2.png" alt="VM001" />
-            </div>
-            <div class="product-card__info">
-              <div class="product-card__name">VM001</div>
-              <div class="product-card__price">NT$2,600</div>
-            </div>
-          </article>
+        <ul class="product-card-grid">
+          <li class="product-card">
+            <a href="#">
+              <div class="product-card__img">
+                <img src="../img/product-2.png" alt="VM001" />
+              </div>
+              <div class="product-card__info">
+                <h3 class="product-card__name">VM001</h3>
+                <p class="product-card__price">NT$2,600</p>
+              </div>
+            </a>
+          </li>
 
-          <article class="product-card">
-            <div class="product-card__img">
-              <img src="./img/product-3.png" alt="Melty Kiss" />
-            </div>
-            <div class="product-card__info">
-              <div class="product-card__name">Melty Kiss</div>
-              <div class="product-card__price">NT$4,000</div>
-            </div>
-          </article>
+          <li class="product-card">
+            <a href="#">
+              <div class="product-card__img">
+                <img src="../img/product-3.png" alt="Melty Kiss" />
+              </div>
+              <div class="product-card__info">
+                <h3 class="product-card__name">Melty Kiss</h3>
+                <p class="product-card__price">NT$4,000</p>
+              </div>
+            </a>
+          </li>
 
-          <article class="product-card">
-            <div class="product-card__img">
-              <img src="./img/product-4.png" alt="BOOMBLOK" />
-            </div>
-            <div class="product-card__info">
-              <div class="product-card__name">BOOMBLOK</div>
-              <div class="product-card__price">NT$3,200</div>
-            </div>
-          </article>
+          <li class="product-card">
+            <a href="#">
+              <div class="product-card__img">
+                <img src="../img/product-4.png" alt="BOOMBLOK" />
+              </div>
+              <div class="product-card__info">
+                <h3 class="product-card__name">BOOMBLOK</h3>
+                <p class="product-card__price">NT$3,200</p>
+              </div>
+            </a>
+          </li>
 
-          <article class="product-card">
-            <div class="product-card__img">
-              <img src="./img/product-7.png" alt="Sugar Snap" />
-            </div>
-            <div class="product-card__info">
-              <div class="product-card__name">Sugar Snap</div>
-              <div class="product-card__price">NT$3,200</div>
-            </div>
-          </article>
-        </div>
+          <li class="product-card">
+            <a href="#">
+              <div class="product-card__img">
+                <img src="../img/product-7.png" alt="Sugar Snap" />
+              </div>
+              <div class="product-card__info">
+                <h3 class="product-card__name">Sugar Snap</h3>
+                <p class="product-card__price">NT$3,200</p>
+              </div>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -324,12 +366,16 @@
         <nav>
           <div class="logo-link">
             <div class="logo">
-              <img src="./img/logo.svg" alt="URBNSTEP Logo" />
+              <img src="../img/logo.svg" alt="URBNSTEP Logo" />
             </div>
-            <div class="page-link">
-              <a href="#">商品列表</a>
-              <a href="#">品牌故事</a>
-            </div>
+            <ul class="page-link">
+              <li>
+                <a href="../02-product-list-page/product-list.html">商品列表</a>
+              </li>
+              <li>
+                <a href="../01-brand-story-page/index.html">品牌故事</a>
+              </li>
+            </ul>
           </div>
         </nav>
 

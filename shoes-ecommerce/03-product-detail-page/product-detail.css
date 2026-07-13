@@ -34,6 +34,47 @@ img {
   display: block;
 }
 
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: #212529;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  font-size: 1.6rem;
+}
+
 .container {
   max-width: 129.6rem;
   margin: 0 auto;
@@ -49,7 +90,11 @@ img {
   padding: 1.2rem 0;
 }
 
-/* nav */
+.page-link a:hover {
+  color: #6c757d;
+}
+
+/* Header Nav */
 .site-header nav {
   width: 100%;
   padding: 1.6rem 0;
@@ -59,7 +104,6 @@ img {
 
 .logo-link {
   width: 35.1rem;
-  height: 4.8rem;
   display: flex;
   gap: 4.8rem;
 }
@@ -72,16 +116,13 @@ img {
 
 .page-link {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 4rem;
 }
 
 .page-link a {
   width: 6.7rem;
-  height: 2.4rem;
-}
-
-.page-link a:last-child {
-  margin-left: 4rem;
 }
 
 .btn-wrapper {
@@ -91,6 +132,10 @@ img {
 .btn-icon {
   padding: 1.2rem;
   cursor: pointer;
+}
+
+.btn-icon:hover {
+  color: #57a203;
 }
 
 /* 右側＋左側 grid */
@@ -125,7 +170,6 @@ nav.breadcrumb {
   display: flex;
   align-items: center;
   padding: 0;
-  height: 2.4rem;
 }
 
 nav.breadcrumb a {
@@ -136,7 +180,15 @@ nav.breadcrumb a {
   line-height: 1.5;
 }
 
+nav.breadcrumb a:hover {
+  color: #57a203;
+}
+
 nav.breadcrumb a.active {
+  color: #212529;
+}
+
+nav.breadcrumb a.active:hover {
   color: #212529;
 }
 
@@ -164,7 +216,7 @@ nav.breadcrumb a.active {
 
 .product-detail-info__price {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 0.8rem;
   margin-bottom: 1.6rem;
 }
@@ -280,12 +332,20 @@ nav.breadcrumb a.active {
 }
 
 /* 尺寸按鈕狀態 */
-.product-selector__btn--size.active {
+.product-selector__btn--size {
+  border: 1px solid #dee2e6;
+}
+
+.product-selector__btn--size:hover {
+  border: 1px solid #6c757d;
+}
+
+.product-selector__btn--size:active {
   border: 1px solid #212529;
 }
 
 .product-selector__btn--size.disable {
-  color: #adb5bd;
+  color: #dee2e6;
   cursor: not-allowed;
 }
 
@@ -308,7 +368,6 @@ nav.breadcrumb a.active {
 
 .product-actions .btn {
   display: flex;
-  /* 讓兩個按鈕自動平分 .product-actions 的寬度 */
   flex: 1;
   justify-content: center;
   align-items: center;
@@ -329,20 +388,77 @@ nav.breadcrumb a.active {
 }
 
 /* 空心按鈕：加入收藏 */
-.product-actions .btn--outline {
-  background-color: transparent;
+/* Default */
+.product-actions .btn--fav {
+  background-color: #fff;
   color: #212529;
   border: 1px solid #212529;
+  border-radius: 0.4rem;
+}
+
+.btn--fav .icon-outline {
+  background-color: #fff;
+  color: #212529;
+  margin-right: 0;
+}
+
+.btn--fav .icon-solid,
+.btn--fav .text-active {
+  display: none;
+}
+
+/* Hover */
+.product-actions .btn--fav:hover {
+  background-color: #212529;
+  color: #fff;
+  border: 1px solid #212529;
+}
+
+.btn--fav:hover .icon-outline {
+  background-color: #212529;
+  color: #fff;
+}
+
+/* Active */
+.product-actions .btn--fav:active {
+  background-color: #fff;
+  color: #212529;
+  border: 1px solid #212529;
+}
+
+.btn--fav:active .icon-outline,
+.btn--fav:active .text-default {
+  display: none;
+}
+
+.btn--fav:active .icon-solid {
+  display: flex;
+  background-color: #fff;
+  color: #212529;
+  margin-right: 0;
+}
+
+.btn--fav:active .text-active {
+  display: flex;
+  color: #212529;
 }
 
 /* 實心按鈕：門市預約試穿 */
 .product-actions .btn--primary {
   background-color: #212529;
   color: #fff;
+  border: none;
+}
+
+.product-actions .shopping-bag {
+  margin-right: 0;
+}
+
+.product-actions .btn--primary:hover {
+  background-color: #495057;
 }
 
 /* product-details-list: 商品材質、購買須知、保養方式 */
-
 .details-item {
   border-bottom: 1px solid #dee2e6;
   padding: 1.2rem 0;
@@ -429,7 +545,12 @@ nav.breadcrumb a.active {
   line-height: 1.5;
   padding: 1.2rem 2.4rem;
   border-radius: 0.8rem;
+  border: none;
   cursor: pointer;
+}
+
+.btn--cta:hover {
+  background-color: #495057;
 }
 
 /* footer */
@@ -448,7 +569,6 @@ nav.breadcrumb a.active {
 
 .site-footer .logo-link {
   width: 100%;
-
   display: flex;
   align-items: center;
 }
@@ -457,10 +577,6 @@ nav.breadcrumb a.active {
   display: flex;
   gap: 4rem;
   margin-left: auto;
-}
-
-.site-footer .page-link a:last-child {
-  margin: 0;
 }
 
 .copyright {
@@ -476,5 +592,4 @@ nav.breadcrumb a.active {
 .copyright p {
   color: #6c757d;
   font-size: 1.4rem;
-  line-height: 1.5;
 }
