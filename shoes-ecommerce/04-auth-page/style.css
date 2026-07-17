@@ -1,0 +1,319 @@
+/* Reusable */
+html {
+  font-size: 62.5%; /* 10px / 16px = 0.625 => 1rem = 10px */
+}
+
+body {
+  color: #212529;
+  font-family: "Noto Sans TC", sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+
+  /* 讓footer擠到網頁底部，不要懸空 */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: #212529;
+}
+
+ul,
+ol {
+  padding-left: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  font-size: 1.6rem;
+}
+
+.container {
+  max-width: 129.6rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.page-link a {
+  color: #212529;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding: 1.2rem 0;
+}
+
+.page-link a:hover {
+  color: #6c757d;
+}
+
+/* Header Nav */
+.site-header nav {
+  width: 100%;
+  padding: 1.6rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  width: 35.1rem;
+  display: flex;
+  gap: 4.8rem;
+}
+
+.logo-link img {
+  width: 10.5rem;
+  height: 3rem;
+  padding: 0.8rem 1.2rem;
+}
+
+.page-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.page-link a {
+  width: 6.7rem;
+}
+
+.btn-wrapper {
+  margin-left: auto;
+}
+
+.btn-icon {
+  padding: 1.2rem;
+  cursor: pointer;
+}
+
+.btn-icon:hover {
+  color: #57a203;
+}
+
+/* Login */
+.login {
+  padding: 6.4rem 0;
+}
+
+.login-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 52.6rem) minmax(0, 74.6rem);
+  gap: 2.4rem;
+}
+
+.brand-card {
+  height: 58.9rem;
+  border-radius: 0.4rem;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.brand-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.brand-card__heading {
+  position: absolute;
+  top: 7.1rem;
+  left: 4rem;
+  z-index: 1;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.brand-card__title {
+  color: #fff;
+  font-size: 4.8rem;
+  font-weight: 700;
+}
+
+.brand-card__slogan {
+  color: #adb5bd;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-left: 12.5rem;
+}
+
+/* 右側 */
+.auth-card {
+  height: 58.9rem;
+  overflow: hidden;
+  border-radius: 0.4rem;
+
+  position: relative;
+}
+
+.auth-card__bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.auth-card__content {
+  position: relative;
+  z-index: 1;
+
+  margin: 0 auto;
+  padding: 12rem 8rem;
+}
+
+.auth-card__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3.2rem;
+}
+
+.auth-tabs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 3.2rem;
+}
+
+.auth-tabs__button {
+  display: block;
+  width: 100%;
+  padding: 1.2rem 0;
+
+  color: #6c757d;
+  border-bottom: 2px solid #dee2e6;
+
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.auth-tabs__button.active {
+  color: #212529;
+  border-bottom: 2px solid #212529;
+}
+
+.social-login {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.social-login__btn {
+  width: 100%;
+  height: 6.4rem;
+  padding: 1.2rem;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.2rem;
+
+  background-color: #fff;
+  color: #212529;
+  border: 1px solid #dee2e6;
+}
+
+.social-login__logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+.social-login__text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+/* footer */
+.site-footer {
+  background-color: #f8f9fa;
+  width: 100%;
+}
+
+.site-footer nav {
+  padding: 0;
+  margin: 0;
+  height: auto;
+  display: flex;
+  margin-top: 6.4rem;
+}
+
+.site-footer .logo-link {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.page-link {
+  display: flex;
+  gap: 4rem;
+  margin-left: auto;
+}
+
+.copyright {
+  padding-top: 3.2rem;
+  margin: 2.4rem 0 6.4rem 0;
+  border-top: 1px solid #dee2e6;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.copyright p {
+  color: #6c757d;
+  font-size: 1.4rem;
+}
