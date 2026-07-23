@@ -1,4 +1,10 @@
 /* Reusable */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%; /* 10px / 16px = 0.625 => 1rem = 10px */
 }
@@ -8,15 +14,6 @@ body {
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 0.05em;
   line-height: 1.2;
-
-  /* 讓footer擠到網頁底部，不要懸空 */
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
 }
 
 h1,
@@ -80,9 +77,14 @@ li {
 }
 
 .container {
+  width: 100%;
   max-width: 129.6rem;
   margin: 0 auto;
-  width: 100%;
+  padding: 0 1.2rem;
+}
+
+.logo a {
+  display: block;
 }
 
 .page-link a {
@@ -106,40 +108,31 @@ li {
   align-items: center;
 }
 
-.logo-link {
-  width: 35.1rem;
+.site-header .logo-link {
   display: flex;
+  align-items: center;
   gap: 4.8rem;
 }
 
-.logo-link img {
-  width: 10.5rem;
-  height: 3rem;
-  padding: 0.8rem 1.2rem;
-}
-
-.page-link {
+.site-header .page-link {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4rem;
 }
 
-.page-link a {
-  width: 6.7rem;
-}
-
 .btn-wrapper {
   margin-left: auto;
-}
-
-.btn-icon {
   padding: 1.2rem;
   cursor: pointer;
 }
 
-.btn-icon:hover {
+.btn-wrapper:hover .btn-icon {
   color: #57a203;
+}
+
+.btn-icon {
+  display: block;
 }
 
 /* Login */
@@ -149,56 +142,29 @@ li {
 
 .login-layout {
   display: grid;
-  grid-template-columns: minmax(0, 52.6rem) minmax(0, 74.6rem);
+  grid-template-columns: minmax(0, 526fr) minmax(0, 746fr);
   gap: 2.4rem;
 }
 
 .brand-card {
-  height: 58.9rem;
   border-radius: 0.4rem;
   overflow: hidden;
-
-  position: relative;
 }
 
 .brand-card__img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
 }
 
-.brand-card__heading {
-  position: absolute;
-  top: 7.1rem;
-  left: 4rem;
-  z-index: 1;
-
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.brand-card__title {
-  color: #fff;
-  font-size: 4.8rem;
-  font-weight: 700;
-}
-
-.brand-card__slogan {
-  color: #adb5bd;
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-left: 12.5rem;
+.brand-card__img.mobile {
+  display: none;
 }
 
 /* 右側 */
 .auth-card {
-  height: 58.9rem;
+  position: relative;
+  display: grid;
   overflow: hidden;
   border-radius: 0.4rem;
-
-  position: relative;
 }
 
 .auth-card__bg {
@@ -206,13 +172,16 @@ li {
   height: 100%;
   object-fit: cover;
   position: absolute;
+  inset: 0;
 }
 
 .auth-card__content {
   position: relative;
   z-index: 1;
 
-  margin: 0 auto;
+  width: 100%;
+  align-self: center;
+  /* margin: 0 auto; */
   padding: 12rem 8rem;
 }
 
@@ -225,7 +194,7 @@ li {
 
 .auth-tabs {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-bottom: 3.2rem;
 }
 
@@ -254,7 +223,6 @@ li {
 
 .social-login__btn {
   width: 100%;
-  height: 6.4rem;
   padding: 1.2rem;
 
   display: flex;
@@ -265,11 +233,17 @@ li {
   background-color: #fff;
   color: #212529;
   border: 1px solid #dee2e6;
+  cursor: pointer;
+}
+
+.social-login__btn:hover {
+  color: #6c757d;
 }
 
 .social-login__logo {
   width: 4rem;
   height: 4rem;
+  flex-shrink: 0;
 }
 
 .social-login__text {
@@ -281,14 +255,14 @@ li {
 .site-footer {
   background-color: #f8f9fa;
   width: 100%;
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
 }
 
 .site-footer nav {
+  display: flex;
   padding: 0;
   margin: 0;
-  height: auto;
-  display: flex;
-  margin-top: 6.4rem;
 }
 
 .site-footer .logo-link {
@@ -297,7 +271,7 @@ li {
   align-items: center;
 }
 
-.page-link {
+.site-footer .page-link {
   display: flex;
   gap: 4rem;
   margin-left: auto;
@@ -305,15 +279,17 @@ li {
 
 .copyright {
   padding-top: 3.2rem;
-  margin: 2.4rem 0 6.4rem 0;
+  margin-top: 2.4rem;
   border-top: 1px solid #dee2e6;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  align-items: center;
+  text-align: center;
 }
 
 .copyright p {
   color: #6c757d;
   font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.copyright p:last-child {
+  margin-bottom: 0;
 }

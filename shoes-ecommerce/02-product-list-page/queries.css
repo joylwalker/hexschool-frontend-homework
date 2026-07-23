@@ -1,31 +1,34 @@
-/* rem and em don't depend on html font-sizein media queries!
+/* rem and em don't depend on html font-size in media queries!
 Instead, 1rem  = 1em =16px */
 
 /***************************/
-/* BELOW 375px (Smaller cellphone) */
+/* BELOW 768px (Tablets) */
 /***************************/
-@media (max-width: 23.5em) {
-  .container {
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 1.2rem;
+@media (max-width: 48em) {
+  /* main-layout */
+  .main-layout {
+    column-gap: 1.6rem;
+  }
+  /* 右側商品區 */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.6rem;
+    row-gap: 3.2rem;
   }
 
+  .product-card.mobile {
+    display: flex;
+  }
+}
+
+/***************************/
+/* BELOW 576px (Large Mobile) */
+/***************************/
+
+@media (max-width: 36em) {
   /* Header Nav */
   .site-header nav {
-    width: 100%;
-    height: 7.2rem;
-    padding: 0;
-  }
-
-  .logo-link {
-    width: auto;
-  }
-
-  .logo-link img {
-    padding: 0.8rem 1.2rem;
-    margin: 0;
+    padding: 1.3rem 0;
   }
 
   .site-header .page-link {
@@ -34,7 +37,6 @@ Instead, 1rem  = 1em =16px */
 
   /* Breadcrumb */
   .breadcrumb {
-    width: auto;
     font-size: 1.4rem;
     margin-top: 1.6rem;
   }
@@ -49,23 +51,19 @@ Instead, 1rem  = 1em =16px */
 
   /* main-layout */
   .main-layout {
-    margin-top: 1.2rem;
     grid-template-columns: 1fr;
     column-gap: 0;
   }
+
   /* 左側邊欄 */
   .sidebar {
     display: none;
   }
+
   /* 右側商品區 */
   .product-grid {
-    grid-template-columns: repeat(2, 1fr);
     column-gap: 1.2rem;
     row-gap: 2.4rem;
-  }
-
-  .product-card.mobile {
-    display: flex;
   }
 
   .product-card {
@@ -92,7 +90,6 @@ Instead, 1rem  = 1em =16px */
   }
 
   .banner {
-    height: 8.8rem;
     gap: 1.6rem;
   }
 
@@ -115,19 +112,9 @@ Instead, 1rem  = 1em =16px */
   }
 
   .site-footer .logo-link {
-    height: auto;
-    margin-top: 0;
-
     flex-direction: column;
     gap: 0.8rem;
     align-items: flex-start;
-    justify-content: center;
-  }
-
-  .site-footer .logo img {
-    width: 10.5rem;
-    height: 3rem;
-    padding: 0.8rem 0;
   }
 
   .site-footer .page-link {
@@ -140,9 +127,5 @@ Instead, 1rem  = 1em =16px */
   .site-footer .page-link a {
     display: block;
     padding: 1.2rem 0;
-  }
-
-  .copyright {
-    margin-bottom: 0;
   }
 }
