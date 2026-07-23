@@ -1,6 +1,12 @@
 /* Reusable */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
-  font-size: 62.5%; /* 10px / 16px = 0.652 => 1rem = 10px */
+  font-size: 62.5%; /* 10px / 16px = 0.625 => 1rem = 10px */
 }
 
 body {
@@ -8,11 +14,6 @@ body {
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 0.05em;
   line-height: 1.2;
-
-  /* 讓footer擠到網頁底部，不要懸空 */
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 h1,
@@ -76,8 +77,14 @@ li {
 }
 
 .container {
+  width: 100%;
   max-width: 129.6rem;
   margin: 0 auto;
+  padding: 0 1.2rem;
+}
+
+.logo a {
+  display: block;
 }
 
 .page-link a {
@@ -101,46 +108,36 @@ li {
   align-items: center;
 }
 
-.logo-link {
-  width: 35.1rem;
+.site-header .logo-link {
   display: flex;
+  align-items: center;
   gap: 4.8rem;
 }
 
-.logo-link img {
-  width: 10.5rem;
-  height: 3rem;
-  padding: 0.8rem 1.2rem;
-  margin-right: 4.8rem;
-}
-
-.page-link {
+.site-header .page-link {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4rem;
 }
 
-.page-link a {
-  width: 6.7rem;
-}
-
 .btn-wrapper {
   margin-left: auto;
-}
-
-.btn-icon {
   padding: 1.2rem;
   cursor: pointer;
 }
 
-.btn-icon:hover {
+.btn-wrapper:hover .btn-icon {
   color: #57a203;
+}
+
+.btn-icon {
+  display: block;
 }
 
 /* Breadcrumb */
 .breadcrumb {
-  width: 19.5rem;
+  width: auto;
   font-size: 1.6rem;
   line-height: 1.5;
   font-weight: 500;
@@ -169,8 +166,6 @@ li {
 
 .breadcrumb-item:not(:last-child)::after {
   content: "/";
-  width: 0.7rem;
-  height: 2.4rem;
   color: #dee2e6;
   font-size: 1.6rem;
   font-weight: 700;
@@ -181,7 +176,6 @@ li {
 
 /* title */
 .title {
-  height: 4.8rem;
   margin-top: 2.4rem;
 }
 
@@ -193,7 +187,7 @@ li {
 .main-layout {
   margin-top: 2.4rem;
   display: grid;
-  grid-template-columns: 19.6rem 1fr;
+  grid-template-columns: 19.6rem minmax(0, 1fr);
   column-gap: 2.4rem;
 }
 /* 左側邊欄 */
@@ -232,6 +226,10 @@ li {
   gap: 1.2rem;
 }
 
+.product-card a:hover {
+  color: #6c757d;
+}
+
 .product-card.mobile {
   display: none;
 }
@@ -241,7 +239,6 @@ li {
 }
 
 .product-img img {
-  /* width: 100%; */
   object-fit: cover;
 }
 
@@ -259,7 +256,6 @@ li {
 
 /* pagination */
 .pagination {
-  height: 4rem;
   padding: 0;
   margin-top: 4.8rem;
   display: flex;
@@ -328,25 +324,25 @@ li {
 
 /* cta */
 .cta {
-  width: 100%;
   margin-top: 3.2rem;
   padding-top: 4.8rem;
-}
-
-.cta p {
-  font-size: 2.4rem;
-  font-weight: 700;
 }
 
 .banner {
   background-color: #e8fec5;
   width: 100%;
-  height: 9.6rem;
+  padding: 2.4rem 0;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 2.4rem;
+}
+
+.banner p {
+  font-size: 2.4rem;
+  font-weight: 700;
 }
 
 .btn--cta {
@@ -355,10 +351,10 @@ li {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.5;
+
+  display: inline-block;
   padding: 1.2rem 2.4rem;
-  border-radius: 0.8rem;
-  border: none;
-  cursor: pointer;
+  border-radius: 0.4rem;
 }
 
 .btn--cta:hover {
@@ -369,14 +365,14 @@ li {
 .site-footer {
   background-color: #f8f9fa;
   width: 100%;
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
 }
 
 .site-footer nav {
   display: flex;
-  height: auto;
   padding: 0;
   margin: 0;
-  margin-top: 6.4rem;
 }
 
 .site-footer .logo-link {
@@ -385,28 +381,26 @@ li {
   align-items: center;
 }
 
-.page-link {
+.site-footer .page-link {
   display: flex;
   gap: 4rem;
   margin-left: auto;
 }
 
-.logo img {
-  margin: 0;
-}
-
 .copyright {
   padding-top: 3.2rem;
-  margin: 2.4rem 0 6.4rem 0;
+  margin-top: 2.4rem;
   border-top: 1px solid #dee2e6;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  align-items: center;
+  text-align: center;
 }
 
 .copyright p {
   color: #6c757d;
   font-size: 1.4rem;
   line-height: 1.5;
+  margin-bottom: 0.4rem;
+}
+
+.copyright p:last-child {
+  margin-bottom: 0;
 }

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>第二堂－鞋子電商｜產品列表頁</title>
     <link rel="stylesheet" href="../normalize.css" />
-    <link rel="stylesheet" href="./product-list.css" />
-    <link rel="stylesheet" href="./queries.css" />
+    <link rel="stylesheet" href="product-list.css" />
+    <link rel="stylesheet" href="queries.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,12 +32,16 @@
             </ul>
           </div>
 
-          <div class="btn-wrapper">
+          <a
+            href="../04-auth-page/login.html"
+            class="btn-wrapper"
+            aria-label="會員中心"
+          >
             <svg
               width="24"
               height="24"
               viewBox="0 0 16 16"
-              fill="#212529"
+              fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
               class="btn-icon"
             >
@@ -46,246 +50,248 @@
                 fill="currentColor"
               />
             </svg>
-          </div>
+          </a>
         </nav>
       </div>
     </header>
 
-    <section class="product-list">
-      <div class="container">
-        <div class="breadcrumb">
-          <div class="breadcrumb-item">
-            <a href="#">首頁</a>
+    <main>
+      <section class="product-list">
+        <div class="container">
+          <div class="breadcrumb">
+            <div class="breadcrumb-item">
+              <a href="#">首頁</a>
+            </div>
+
+            <div class="breadcrumb-item">
+              <a href="#">女鞋</a>
+            </div>
+
+            <div class="breadcrumb-item active">
+              <a href="#">所有商品</a>
+            </div>
           </div>
 
-          <div class="breadcrumb-item">
-            <a href="#">女鞋</a>
+          <div class="title">
+            <h3>女鞋</h3>
           </div>
 
-          <div class="breadcrumb-item active">
-            <a href="#">所有商品</a>
-          </div>
-        </div>
-
-        <div class="title">
-          <h3>女鞋</h3>
-        </div>
-
-        <!-- 雙欄 grid -->
-        <div class="main-layout">
-          <!-- 左側邊欄 -->
-          <aside class="sidebar">
-            <ul>
-              <li class="active">所有商品</li>
-              <li>
-                <a href="#">慢跑鞋</a>
-              </li>
-              <li><a href="#">滑板鞋</a></li>
-              <li><a href="#">厚底鞋</a></li>
-              <li><a href="#">限定／聯名企劃</a></li>
-            </ul>
-          </aside>
-
-          <!-- 右側商品區(含商品＆分頁器) -->
-          <section class="product-content">
-            <ul class="product-grid">
-              <!-- 商品卡片 -->
-              <li class="product-card">
-                <a
-                  href="../03-product-detail-page/product-detail.html"
-                  class="product-card__link"
-                >
-                  <div class="product-img">
-                    <img src="../img/product.png" alt="platform 404" />
-                  </div>
-
-                  <div class="product-info">
-                    <h3 class="product-name">PLATEFORM 404</h3>
-                    <p class="product-price">NT$2,600</p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="product-card">
-                <a href="../03-product-detail-page/product-detail.html">
-                  <div class="product-img">
-                    <img src="../img/product-1.png" alt="platform 404" />
-                  </div>
-                  <div class="product-info">
-                    <h3 class="product-name">PLATEFORM 404</h3>
-                    <p class="product-price">NT$2,600</p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="product-card">
-                <a href="#">
-                  <div class="product-img">
-                    <img src="../img/product-2.png" alt="platform 404" />
-                  </div>
-                  <div class="product-info">
-                    <h3 class="product-name">VM001</h3>
-                    <p class="product-price">NT$2,600</p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="product-card">
-                <a href="#">
-                  <div class="product-img">
-                    <img src="../img/product-3.png" alt="platform 404" />
-                  </div>
-                  <div class="product-info">
-                    <h3 class="product-name">Melty Kiss</h3>
-                    <p class="product-price">NT$4,000</p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="product-card">
-                <a href="#">
-                  <div class="product-img">
-                    <img src="../img/product-4.png" alt="platform 404" />
-                  </div>
-                  <div class="product-info">
-                    <h3 class="product-name">BOOMBLOK</h3>
-                    <p class="product-price">NT$3,200</p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="product-card">
-                <a href="#">
-                  <div class="product-img">
-                    <img src="../img/product-5.png" alt="platform 404" />
-                  </div>
-                  <div class="product-info">
-                    <h3 class="product-name">BOOMBLOK</h3>
-                    <p class="product-price">NT$3,200</p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="product-card">
-                <a href="#">
-                  <div class="product-img">
-                    <img src="../img/product-6.png" alt="platform 404" />
-                  </div>
-                  <div class="product-info">
-                    <h3 class="product-name">R:UNER</h3>
-                    <p class="product-price">NT$4,000</p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="product-card">
-                <a href="#">
-                  <div class="product-img">
-                    <img src="../img/product-7.png" alt="platform 404" />
-                  </div>
-                  <div class="product-info">
-                    <h3 class="product-name">Sugar Snap</h3>
-                    <p class="product-price">NT$4,000</p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="product-card">
-                <a href="#">
-                  <div class="product-img">
-                    <img src="../img/product-8.png" alt="platform 404" />
-                  </div>
-                  <div class="product-info">
-                    <h3 class="product-name">Neofoam</h3>
-                    <p class="product-price">NT$4,000</p>
-                  </div>
-                </a>
-              </li>
-
-              <li class="product-card mobile">
-                <a href="#">
-                  <div class="product-img">
-                    <img src="../img/product-9.png" alt="platform 404" />
-                  </div>
-                  <div class="product-info">
-                    <h3 class="product-name">Buttermood</h3>
-                    <p class="product-price">NT$4,000</p>
-                  </div>
-                </a>
-              </li>
-            </ul>
-
-            <!-- 分頁器 -->
-            <nav class="pagination">
-              <button
-                class="page-btn btn-icon-left"
-                type="button"
-                aria-label="上一頁"
-              >
-                <svg
-                  width="9"
-                  height="17"
-                  viewBox="0 0 9 17"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M8.56862 0.183617C8.62682 0.241674 8.673 0.310644 8.70451 0.386575C8.73601 0.462507 8.75223 0.543908 8.75223 0.626117C8.75223 0.708326 8.73601 0.789728 8.70451 0.865659C8.673 0.941591 8.62682 1.01056 8.56862 1.06862L1.50987 8.12612L8.56862 15.1836C8.68597 15.301 8.75191 15.4601 8.75191 15.6261C8.75191 15.7921 8.68597 15.9513 8.56862 16.0686C8.45126 16.186 8.29209 16.2519 8.12612 16.2519C7.96015 16.2519 7.80097 16.186 7.68362 16.0686L0.183617 8.56862C0.125413 8.51056 0.0792341 8.44159 0.047726 8.36566C0.016218 8.28973 0 8.20833 0 8.12612C0 8.04391 0.016218 7.96251 0.047726 7.88658C0.0792341 7.81064 0.125413 7.74167 0.183617 7.68362L7.68362 0.183617C7.74167 0.125413 7.81064 0.0792347 7.88657 0.0477266C7.96251 0.0162186 8.04391 0 8.12612 0C8.20833 0 8.28973 0.0162186 8.36566 0.0477266C8.44159 0.0792347 8.51056 0.125413 8.56862 0.183617Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </button>
-
-              <ul class="pagination-numbers">
+          <!-- 雙欄 grid -->
+          <div class="main-layout">
+            <!-- 左側邊欄 -->
+            <aside class="sidebar">
+              <ul>
+                <li class="active">所有商品</li>
                 <li>
-                  <button class="page-btn active">1</button>
+                  <a href="#">慢跑鞋</a>
                 </li>
-                <li>
-                  <button class="page-btn">2</button>
+                <li><a href="#">滑板鞋</a></li>
+                <li><a href="#">厚底鞋</a></li>
+                <li><a href="#">限定／聯名企劃</a></li>
+              </ul>
+            </aside>
+
+            <!-- 右側商品區(含商品＆分頁器) -->
+            <section class="product-content">
+              <ul class="product-grid">
+                <!-- 商品卡片 -->
+                <li class="product-card">
+                  <a
+                    href="../03-product-detail-page/product-detail.html"
+                    class="product-card__link"
+                  >
+                    <div class="product-img">
+                      <img src="../img/product.png" alt="platform 404" />
+                    </div>
+
+                    <div class="product-info">
+                      <h3 class="product-name">PLATEFORM 404</h3>
+                      <p class="product-price">NT$2,600</p>
+                    </div>
+                  </a>
                 </li>
-                <li>
-                  <button class="page-btn">3</button>
+
+                <li class="product-card">
+                  <a href="../03-product-detail-page/product-detail.html">
+                    <div class="product-img">
+                      <img src="../img/product-1.png" alt="platform 404" />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name">PLATEFORM 404</h3>
+                      <p class="product-price">NT$2,600</p>
+                    </div>
+                  </a>
                 </li>
-                <li>
-                  <span class="page-ellipsis">...</span>
+
+                <li class="product-card">
+                  <a href="#">
+                    <div class="product-img">
+                      <img src="../img/product-2.png" alt="platform 404" />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name">VM001</h3>
+                      <p class="product-price">NT$2,600</p>
+                    </div>
+                  </a>
                 </li>
-                <li>
-                  <button class="page-btn">10</button>
+
+                <li class="product-card">
+                  <a href="#">
+                    <div class="product-img">
+                      <img src="../img/product-3.png" alt="platform 404" />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name">Melty Kiss</h3>
+                      <p class="product-price">NT$4,000</p>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="product-card">
+                  <a href="#">
+                    <div class="product-img">
+                      <img src="../img/product-4.png" alt="platform 404" />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name">BOOMBLOK</h3>
+                      <p class="product-price">NT$3,200</p>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="product-card">
+                  <a href="#">
+                    <div class="product-img">
+                      <img src="../img/product-5.png" alt="platform 404" />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name">BOOMBLOK</h3>
+                      <p class="product-price">NT$3,200</p>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="product-card">
+                  <a href="#">
+                    <div class="product-img">
+                      <img src="../img/product-6.png" alt="platform 404" />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name">R:UNER</h3>
+                      <p class="product-price">NT$4,000</p>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="product-card">
+                  <a href="#">
+                    <div class="product-img">
+                      <img src="../img/product-7.png" alt="platform 404" />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name">Sugar Snap</h3>
+                      <p class="product-price">NT$4,000</p>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="product-card">
+                  <a href="#">
+                    <div class="product-img">
+                      <img src="../img/product-8.png" alt="platform 404" />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name">Neofoam</h3>
+                      <p class="product-price">NT$4,000</p>
+                    </div>
+                  </a>
+                </li>
+
+                <li class="product-card mobile">
+                  <a href="#">
+                    <div class="product-img">
+                      <img src="../img/product-9.png" alt="Buttermood" />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name">Buttermood</h3>
+                      <p class="product-price">NT$4,000</p>
+                    </div>
+                  </a>
                 </li>
               </ul>
 
-              <button
-                class="page-btn btn-icon-right"
-                type="button"
-                aria-label="下一頁"
-              >
-                <svg
-                  width="9"
-                  height="17"
-                  viewBox="0 0 9 17"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+              <!-- 分頁器 -->
+              <nav class="pagination">
+                <button
+                  class="page-btn btn-icon-left"
+                  type="button"
+                  aria-label="上一頁"
                 >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M0.183617 0.183617C0.241674 0.125413 0.310643 0.0792347 0.386575 0.0477266C0.462506 0.0162186 0.543908 0 0.626117 0C0.708326 0 0.789728 0.0162186 0.865659 0.0477266C0.94159 0.0792347 1.01056 0.125413 1.06862 0.183617L8.56862 7.68362C8.62682 7.74167 8.673 7.81064 8.70451 7.88658C8.73601 7.96251 8.75223 8.04391 8.75223 8.12612C8.75223 8.20833 8.73601 8.28973 8.70451 8.36566C8.673 8.44159 8.62682 8.51056 8.56862 8.56862L1.06862 16.0686C0.951259 16.186 0.792087 16.2519 0.626117 16.2519C0.460147 16.2519 0.300975 16.186 0.183617 16.0686C0.0662586 15.9513 0.000327229 15.7921 0.000327229 15.6261C0.000327229 15.4601 0.0662586 15.301 0.183617 15.1836L7.24237 8.12612L0.183617 1.06862C0.125413 1.01056 0.0792341 0.941591 0.047726 0.865659C0.016218 0.789728 0 0.708326 0 0.626117C0 0.543908 0.016218 0.462507 0.047726 0.386575C0.0792341 0.310644 0.125413 0.241674 0.183617 0.183617Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </button>
-            </nav>
-          </section>
+                  <svg
+                    width="9"
+                    height="17"
+                    viewBox="0 0 9 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M8.56862 0.183617C8.62682 0.241674 8.673 0.310644 8.70451 0.386575C8.73601 0.462507 8.75223 0.543908 8.75223 0.626117C8.75223 0.708326 8.73601 0.789728 8.70451 0.865659C8.673 0.941591 8.62682 1.01056 8.56862 1.06862L1.50987 8.12612L8.56862 15.1836C8.68597 15.301 8.75191 15.4601 8.75191 15.6261C8.75191 15.7921 8.68597 15.9513 8.56862 16.0686C8.45126 16.186 8.29209 16.2519 8.12612 16.2519C7.96015 16.2519 7.80097 16.186 7.68362 16.0686L0.183617 8.56862C0.125413 8.51056 0.0792341 8.44159 0.047726 8.36566C0.016218 8.28973 0 8.20833 0 8.12612C0 8.04391 0.016218 7.96251 0.047726 7.88658C0.0792341 7.81064 0.125413 7.74167 0.183617 7.68362L7.68362 0.183617C7.74167 0.125413 7.81064 0.0792347 7.88657 0.0477266C7.96251 0.0162186 8.04391 0 8.12612 0C8.20833 0 8.28973 0.0162186 8.36566 0.0477266C8.44159 0.0792347 8.51056 0.125413 8.56862 0.183617Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+
+                <ul class="pagination-numbers">
+                  <li>
+                    <button class="page-btn active">1</button>
+                  </li>
+                  <li>
+                    <button class="page-btn">2</button>
+                  </li>
+                  <li>
+                    <button class="page-btn">3</button>
+                  </li>
+                  <li>
+                    <span class="page-ellipsis">...</span>
+                  </li>
+                  <li>
+                    <button class="page-btn">10</button>
+                  </li>
+                </ul>
+
+                <button
+                  class="page-btn btn-icon-right"
+                  type="button"
+                  aria-label="下一頁"
+                >
+                  <svg
+                    width="9"
+                    height="17"
+                    viewBox="0 0 9 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M0.183617 0.183617C0.241674 0.125413 0.310643 0.0792347 0.386575 0.0477266C0.462506 0.0162186 0.543908 0 0.626117 0C0.708326 0 0.789728 0.0162186 0.865659 0.0477266C0.94159 0.0792347 1.01056 0.125413 1.06862 0.183617L8.56862 7.68362C8.62682 7.74167 8.673 7.81064 8.70451 7.88658C8.73601 7.96251 8.75223 8.04391 8.75223 8.12612C8.75223 8.20833 8.73601 8.28973 8.70451 8.36566C8.673 8.44159 8.62682 8.51056 8.56862 8.56862L1.06862 16.0686C0.951259 16.186 0.792087 16.2519 0.626117 16.2519C0.460147 16.2519 0.300975 16.186 0.183617 16.0686C0.0662586 15.9513 0.000327229 15.7921 0.000327229 15.6261C0.000327229 15.4601 0.0662586 15.301 0.183617 15.1836L7.24237 8.12612L0.183617 1.06862C0.125413 1.01056 0.0792341 0.941591 0.047726 0.865659C0.016218 0.789728 0 0.708326 0 0.626117C0 0.543908 0.016218 0.462507 0.047726 0.386575C0.0792341 0.310644 0.125413 0.241674 0.183617 0.183617Z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </button>
+              </nav>
+            </section>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <section class="cta">
       <div class="banner">
         <p>加入會員取得 9 折優惠</p>
-        <button class="btn btn--cta">馬上註冊</button>
+        <a href="../04-auth-page/register.html" class="btn--cta">馬上註冊</a>
       </div>
     </section>
 
@@ -294,7 +300,9 @@
         <nav>
           <div class="logo-link">
             <div class="logo">
-              <img src="../img/logo.svg" alt="URBNSTEP Logo" />
+              <a href="#">
+                <img src="../img/logo.svg" alt="URBNSTEP Logo" />
+              </a>
             </div>
             <ul class="page-link">
               <li>

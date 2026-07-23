@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>第二堂－鞋子電商｜產品詳情頁</title>
     <link rel="stylesheet" href="../normalize.css" />
-    <link rel="stylesheet" href="./product-detail.css" />
-    <link rel="stylesheet" href="./queries.css" />
+    <link rel="stylesheet" href="product-detail.css" />
+    <link rel="stylesheet" href="queries.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,6 +24,7 @@
                 <img src="../img/logo.svg" alt="URBNSTEP Logo" />
               </a>
             </div>
+
             <ul class="page-link">
               <li>
                 <a href="../02-product-list-page/product-list.html">商品列表</a>
@@ -34,12 +35,16 @@
             </ul>
           </div>
 
-          <div class="btn-wrapper">
+          <a
+            href="../04-auth-page/login.html"
+            class="btn-wrapper"
+            aria-label="會員中心"
+          >
             <svg
               width="24"
               height="24"
               viewBox="0 0 16 16"
-              fill="#212529"
+              fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
               class="btn-icon"
             >
@@ -48,7 +53,7 @@
                 fill="currentColor"
               />
             </svg>
-          </div>
+          </a>
         </nav>
       </div>
     </header>
@@ -58,7 +63,7 @@
         <!-- 右側＋左側 -->
         <div class="container product-detail__container">
           <!-- 左側商品圖 -->
-          <section class="product-gallery">
+          <div class="product-gallery">
             <ul class="product-gallery__list">
               <li class="product-gallery__item">
                 <img
@@ -117,7 +122,7 @@
                 />
               </li>
             </ul>
-          </section>
+          </div>
 
           <!-- 右側資訊合併 -->
           <section class="product-summary">
@@ -151,11 +156,11 @@
                 <span class="product-selector__label">顏色</span>
               </div>
               <div class="product-selector__options">
-                <button class="product-selector__btn">
+                <button type="button" class="product-selector__btn">
                   <img src="../img/image.png" alt="藍色" />
                   <span>藍色</span>
                 </button>
-                <button class="product-selector__btn">
+                <button type="button" class="product-selector__btn">
                   <img src="../img/product-1.png" alt="卡其色" />
                   <span>卡其色</span>
                 </button>
@@ -165,27 +170,39 @@
               <div class="product-selector__size">
                 <span class="product-selector__label">尺寸</span>
                 <div class="product-selector__options">
-                  <button class="product-selector__btn--size">
+                  <button type="button" class="product-selector__btn--size">
                     35(22.5cm)
                   </button>
-                  <button class="product-selector__btn--size">
+                  <button type="button" class="product-selector__btn--size">
                     36(23.0cm)
                   </button>
-                  <button class="product-selector__btn--size">
+                  <button type="button" class="product-selector__btn--size">
                     37(23.5cm)
                   </button>
-                  <button class="product-selector__btn--size">38(24cm)</button>
-                  <button class="product-selector__btn--size">
+                  <button type="button" class="product-selector__btn--size">
+                    38(24cm)
+                  </button>
+                  <button type="button" class="product-selector__btn--size">
                     39(24.5cm)
                   </button>
-                  <button class="product-selector__btn--size">
+                  <button type="button" class="product-selector__btn--size">
                     40(25.0cm)
                   </button>
-                  <button class="product-selector__btn--size">41(26cm)</button>
-                  <button class="product-selector__btn--size disable">
+                  <button type="button" class="product-selector__btn--size">
+                    41(26cm)
+                  </button>
+                  <button
+                    type="button"
+                    class="product-selector__btn--size disable"
+                    disabled
+                  >
                     42(26.5cm)
                   </button>
-                  <button class="product-selector__btn--size disable">
+                  <button
+                    type="button"
+                    class="product-selector__btn--size disable"
+                    disabled
+                  >
                     43(27.0cm)
                   </button>
                 </div>
@@ -194,7 +211,7 @@
             </div>
             <!-- product-actions: 加入收藏、門市試穿 -->
             <div class="product-actions">
-              <button class="btn btn--fav">
+              <button type="button" class="btn btn--fav">
                 <!-- 預設顯示（加入收藏） -->
                 <svg
                   class="icon-outline"
@@ -238,7 +255,7 @@
                 <span class="text-active">已收藏</span>
               </button>
 
-              <button class="btn btn--primary">
+              <button type="button" class="btn btn--primary">
                 <svg
                   class="shopping-bag"
                   width="20"
@@ -259,105 +276,105 @@
             <ul class="product-details-list">
               <li class="details-item">
                 <h3 class="details-item__title">商品材質</h3>
-                <ul class="details-item__list">
-                  <li>鞋面：合成皮革（Synthetic Leather）</li>
-                  <li>內裡：透氣網布材質，提升舒適與排汗性</li>
-                  <li>鞋底：EVA輕量發泡橡膠，具備良好緩震與止滑效果</li>
-                  <li>鞋帶：聚酯纖維，耐拉扯不易鬆脫</li>
-                </ul>
+                <div class="details-item__list">
+                  <p>鞋面：合成皮革（Synthetic Leather）</p>
+                  <p>內裡：透氣網布材質，提升舒適與排汗性</p>
+                  <p>鞋底：EVA輕量發泡橡膠，具備良好緩震與止滑效果</p>
+                  <p>鞋帶：聚酯纖維，耐拉扯不易鬆脫</p>
+                </div>
               </li>
 
               <li class="details-item">
                 <h3 class="details-item__title">購買須知</h3>
-                <ul class="details-item__list">
-                  <li>商品顏色因螢幕顯示可能略有差異，請以實品為準。</li>
-                  <li>建議首次穿著前試穿確認尺寸，避免影響退換貨權益。</li>
-                  <li>
+                <div class="details-item__list">
+                  <p>商品顏色因螢幕顯示可能略有差異，請以實品為準。</p>
+                  <p>建議首次穿著前試穿確認尺寸，避免影響退換貨權益。</p>
+                  <p>
                     本商品為限量發售，庫存有限，如需更換尺寸請儘早聯繫客服協助處理。
-                  </li>
-                </ul>
+                  </p>
+                </div>
               </li>
 
               <li class="details-item">
                 <h3 class="details-item__title">保養方式</h3>
-                <ul class="details-item__list">
-                  <li>
+                <div class="details-item__list">
+                  <p>
                     建議以乾布或微濕軟布擦拭表面汙漬，避免機洗或長時間浸水。
-                  </li>
-                  <li>
+                  </p>
+                  <p>
                     收納時請放置於乾燥通風處，避免日曬及高溫導致變形或龜裂。
-                  </li>
-                  <li>
+                  </p>
+                  <p>
                     若需深層清潔，建議使用中性清潔劑並搭配柔刷輕刷，勿使用漂白水或強酸強鹼清潔劑。
-                  </li>
-                </ul>
+                  </p>
+                </div>
               </li>
             </ul>
           </section>
         </div>
       </section>
+
+      <section class="recommend-products">
+        <div class="recommend-products__content container">
+          <h4 class="recommend-products__title">你可能也喜歡...</h4>
+          <!-- 商品卡片 -->
+          <ul class="product-card-grid">
+            <li class="product-card">
+              <a href="#">
+                <div class="product-card__img">
+                  <img src="../img/product-2.png" alt="VM001" />
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">VM001</h3>
+                  <p class="product-card__price">NT$2,600</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="product-card">
+              <a href="#">
+                <div class="product-card__img">
+                  <img src="../img/product-3.png" alt="Melty Kiss" />
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">Melty Kiss</h3>
+                  <p class="product-card__price">NT$4,000</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="product-card">
+              <a href="#">
+                <div class="product-card__img">
+                  <img src="../img/product-4.png" alt="BOOMBLOK" />
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">BOOMBLOK</h3>
+                  <p class="product-card__price">NT$3,200</p>
+                </div>
+              </a>
+            </li>
+
+            <li class="product-card">
+              <a href="#">
+                <div class="product-card__img">
+                  <img src="../img/product-7.png" alt="Sugar Snap" />
+                </div>
+                <div class="product-card__info">
+                  <h3 class="product-card__name">Sugar Snap</h3>
+                  <p class="product-card__price">NT$3,200</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </main>
-
-    <section class="recommend-products">
-      <div class="recommend-products__content container">
-        <h4 class="recommend-products__title">你可能也喜歡...</h4>
-        <!-- 商品卡片 -->
-        <ul class="product-card-grid">
-          <li class="product-card">
-            <a href="#">
-              <div class="product-card__img">
-                <img src="../img/product-2.png" alt="VM001" />
-              </div>
-              <div class="product-card__info">
-                <h3 class="product-card__name">VM001</h3>
-                <p class="product-card__price">NT$2,600</p>
-              </div>
-            </a>
-          </li>
-
-          <li class="product-card">
-            <a href="#">
-              <div class="product-card__img">
-                <img src="../img/product-3.png" alt="Melty Kiss" />
-              </div>
-              <div class="product-card__info">
-                <h3 class="product-card__name">Melty Kiss</h3>
-                <p class="product-card__price">NT$4,000</p>
-              </div>
-            </a>
-          </li>
-
-          <li class="product-card">
-            <a href="#">
-              <div class="product-card__img">
-                <img src="../img/product-4.png" alt="BOOMBLOK" />
-              </div>
-              <div class="product-card__info">
-                <h3 class="product-card__name">BOOMBLOK</h3>
-                <p class="product-card__price">NT$3,200</p>
-              </div>
-            </a>
-          </li>
-
-          <li class="product-card">
-            <a href="#">
-              <div class="product-card__img">
-                <img src="../img/product-7.png" alt="Sugar Snap" />
-              </div>
-              <div class="product-card__info">
-                <h3 class="product-card__name">Sugar Snap</h3>
-                <p class="product-card__price">NT$3,200</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
 
     <section class="cta">
       <div class="banner">
         <p>加入會員取得 9 折優惠</p>
-        <button class="btn btn--cta">馬上註冊</button>
+        <a href="../04-auth-page/register.html" class="btn--cta">馬上註冊</a>
       </div>
     </section>
 
@@ -366,7 +383,9 @@
         <nav>
           <div class="logo-link">
             <div class="logo">
-              <img src="../img/logo.svg" alt="URBNSTEP Logo" />
+              <a href="#">
+                <img src="../img/logo.svg" alt="URBNSTEP Logo" />
+              </a>
             </div>
             <ul class="page-link">
               <li>

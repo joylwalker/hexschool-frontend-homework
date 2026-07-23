@@ -1,6 +1,12 @@
 /* Reusable */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
-  font-size: 62.5%; /* 10px / 16px = 0.652 => 1rem = 10px */
+  font-size: 62.5%; /* 10px / 16px = 0.625 => 1rem = 10px */
 }
 
 body {
@@ -8,11 +14,6 @@ body {
   font-family: "Noto Sans TC", sans-serif;
   letter-spacing: 0.05em;
   line-height: 1.2;
-
-  /* 讓footer擠到網頁底部，不要懸空 */
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
 
 h1,
@@ -76,9 +77,14 @@ li {
 }
 
 .container {
+  width: 100%;
   max-width: 129.6rem;
   margin: 0 auto;
-  width: 100%;
+  padding: 0 1.2rem;
+}
+
+.logo a {
+  display: block;
 }
 
 .page-link a {
@@ -102,40 +108,31 @@ li {
   align-items: center;
 }
 
-.logo-link {
-  width: 35.1rem;
+.site-header .logo-link {
   display: flex;
+  align-items: center;
   gap: 4.8rem;
 }
 
-.logo-link img {
-  width: 10.5rem;
-  height: 3rem;
-  padding: 0.8rem 1.2rem;
-}
-
-.page-link {
+.site-header .page-link {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4rem;
 }
 
-.page-link a {
-  width: 6.7rem;
-}
-
 .btn-wrapper {
   margin-left: auto;
-}
-
-.btn-icon {
   padding: 1.2rem;
   cursor: pointer;
 }
 
-.btn-icon:hover {
+.btn-wrapper:hover .btn-icon {
   color: #57a203;
+}
+
+.btn-icon {
+  display: block;
 }
 
 /* 右側＋左側 grid */
@@ -144,13 +141,14 @@ li {
   /* 使用 minmax(0, 比例) 強制鎖定比例，不讓內容撐破排版 */
   grid-template-columns: minmax(0, 746fr) minmax(0, 526fr);
   gap: 2.4rem;
-  padding: 6.4rem 0;
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
 }
 
 /* 左側商品圖 */
 .product-gallery__list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.8rem;
 
   list-style: none;
@@ -162,7 +160,6 @@ li {
 
 .product-gallery__img {
   width: 100%;
-  object-fit: cover;
 }
 
 /* nav breadcrumb */
@@ -194,16 +191,12 @@ nav.breadcrumb a.active:hover {
 
 .breadcrumb a:not(:last-child)::after {
   content: "/";
-  width: 0.7rem;
-  height: 2.4rem;
   color: #dee2e6;
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: 0;
   margin: 0 1.2rem;
-  /* ::after 預設是inline，無法設定寬高 */
-  display: inline-block;
 }
 
 /* 文字、價格、內容 */
@@ -216,7 +209,7 @@ nav.breadcrumb a.active:hover {
 
 .product-detail-info__price {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 0.8rem;
   margin-bottom: 1.6rem;
 }
@@ -239,8 +232,8 @@ nav.breadcrumb a.active:hover {
   line-height: 1.5;
 }
 
-.product-detail-info p:last-child {
-  padding-top: 1.2rem;
+.product-detail-info__description:last-child {
+  margin-top: 1.2rem;
 }
 
 .product-detail-info {
@@ -248,23 +241,13 @@ nav.breadcrumb a.active:hover {
 }
 
 /* 商品顏色選擇 */
-.product-selector__color {
-  margin-bottom: 0.8rem;
-}
-
-.product-selector__label {
-  font-size: 1.6rem;
-  line-height: 1.5;
-}
-
 .product-selector__options {
-  height: 9.2rem;
   display: flex;
   gap: 0.8rem;
-  /* margin-bottom: 3.2rem; */
 }
 
 .product-selector__btn {
+  width: 6.4rem;
   background-color: transparent;
   border: none;
   padding: 0;
@@ -274,12 +257,10 @@ nav.breadcrumb a.active:hover {
   flex-direction: column;
   align-items: center;
   gap: 0.4rem;
-  width: 6.4rem;
 }
 
 .product-selector__btn img {
-  width: 6.4rem;
-  height: 6.4rem;
+  width: 100%;
 }
 
 .product-selector__btn span {
@@ -289,6 +270,30 @@ nav.breadcrumb a.active:hover {
   line-height: 1.5;
 }
 
+/* Hover */
+.product-selector__btn:hover:not(:focus):not(:disabled) img {
+  opacity: 0.8;
+}
+
+/* Selected */
+.product-selector__btn:focus img {
+  border: 1px solid #212529;
+}
+
+.product-selector__btn:focus span {
+  color: #212529;
+}
+
+/* Disabled */
+.product-selector__btn:disabled {
+  cursor: not-allowed;
+}
+
+.product-selector__btn:disabled img,
+.product-selector__btn:disabled span {
+  opacity: 0.4;
+}
+
 /* 商品尺寸選擇 */
 .product-selector__size {
   margin-top: 3.2rem;
@@ -296,18 +301,15 @@ nav.breadcrumb a.active:hover {
 }
 
 .product-selector__label {
-  height: 2.4rem;
+  display: block;
   font-size: 1.6rem;
   line-height: 1.5;
   margin-bottom: 0.8rem;
-  display: block;
 }
 
 .product-selector__size .product-selector__options {
-  /* 強制解除 .product-selector__options 9.2rem 的限制，讓按鈕自己撐開高度 */
-  height: auto;
   display: grid;
-  grid-template-columns: repeat(3, 16rem);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.8rem;
 }
 
@@ -322,8 +324,8 @@ nav.breadcrumb a.active:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 16rem;
-  height: 4.8rem;
+  width: 100%;
+  min-height: 4.8rem;
   /* 文字設定 */
   color: #212529;
   font-size: 1.6rem;
@@ -332,15 +334,11 @@ nav.breadcrumb a.active:hover {
 }
 
 /* 尺寸按鈕狀態 */
-.product-selector__btn--size {
-  border: 1px solid #dee2e6;
-}
-
 .product-selector__btn--size:hover {
   border: 1px solid #6c757d;
 }
 
-.product-selector__btn--size:active {
+.product-selector__btn--size:focus {
   border: 1px solid #212529;
 }
 
@@ -374,7 +372,7 @@ nav.breadcrumb a.active:hover {
   align-items: center;
   gap: 0.2rem;
 
-  height: 4.8rem;
+  min-height: 4.8rem;
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.5;
@@ -421,25 +419,25 @@ nav.breadcrumb a.active:hover {
 }
 
 /* Active */
-.product-actions .btn--fav:active {
+.product-actions .btn--fav:focus {
   background-color: #fff;
   color: #212529;
   border: 1px solid #212529;
 }
 
-.btn--fav:active .icon-outline,
-.btn--fav:active .text-default {
+.btn--fav:focus .icon-outline,
+.btn--fav:focus .text-default {
   display: none;
 }
 
-.btn--fav:active .icon-solid {
+.btn--fav:focus .icon-solid {
   display: flex;
   background-color: #fff;
   color: #212529;
   margin-right: 0;
 }
 
-.btn--fav:active .text-active {
+.btn--fav:focus .text-active {
   display: flex;
   color: #212529;
 }
@@ -473,15 +471,17 @@ nav.breadcrumb a.active:hover {
 }
 
 .details-item__list {
-  list-style: none;
   color: #6c757d;
+}
+
+.details-item__list p {
   font-size: 1.6rem;
   line-height: 1.5;
 }
 
 /* recommend-products */
 .recommend-products__content {
-  padding: 4.8rem;
+  padding-block: 4.8rem;
 }
 
 .recommend-products__title {
@@ -498,6 +498,10 @@ nav.breadcrumb a.active:hover {
 
 .product-card {
   cursor: pointer;
+}
+
+.product-card a:hover {
+  color: #6c757d;
 }
 
 .product-card__info {
@@ -518,16 +522,16 @@ nav.breadcrumb a.active:hover {
 
 /* cta */
 .cta {
-  width: 100%;
   padding-top: 4rem;
 }
 
 .banner {
   background-color: #e8fec5;
   width: 100%;
-  height: 9.6rem;
+  padding: 2.4rem 0;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 2.4rem;
@@ -544,10 +548,10 @@ nav.breadcrumb a.active:hover {
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.5;
+
+  display: inline-block;
   padding: 1.2rem 2.4rem;
-  border-radius: 0.8rem;
-  border: none;
-  cursor: pointer;
+  border-radius: 0.4rem;
 }
 
 .btn--cta:hover {
@@ -558,14 +562,14 @@ nav.breadcrumb a.active:hover {
 .site-footer {
   background-color: #f8f9fa;
   width: 100%;
+  padding-top: 6.4rem;
+  padding-bottom: 6.4rem;
 }
 
 .site-footer nav {
+  display: flex;
   padding: 0;
   margin: 0;
-  height: auto;
-  display: flex;
-  margin-top: 6.4rem;
 }
 
 .site-footer .logo-link {
@@ -574,7 +578,7 @@ nav.breadcrumb a.active:hover {
   align-items: center;
 }
 
-.page-link {
+.site-footer .page-link {
   display: flex;
   gap: 4rem;
   margin-left: auto;
@@ -582,15 +586,17 @@ nav.breadcrumb a.active:hover {
 
 .copyright {
   padding-top: 3.2rem;
-  margin: 2.4rem 0 6.4rem 0;
+  margin-top: 2.4rem;
   border-top: 1px solid #dee2e6;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-  align-items: center;
+  text-align: center;
 }
 
 .copyright p {
   color: #6c757d;
   font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+}
+
+.copyright p:last-child {
+  margin-bottom: 0;
 }

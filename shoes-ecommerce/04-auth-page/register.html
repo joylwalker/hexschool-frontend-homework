@@ -34,7 +34,11 @@
             </ul>
           </div>
 
-          <div class="btn-wrapper">
+          <a
+            href="../04-auth-page/login.html"
+            class="btn-wrapper"
+            aria-label="會員中心"
+          >
             <svg
               width="24"
               height="24"
@@ -48,7 +52,7 @@
                 fill="currentColor"
               />
             </svg>
-          </div>
+          </a>
         </nav>
       </div>
     </header>
@@ -56,25 +60,26 @@
     <main class="login">
       <div class="container login-layout">
         <!-- 左側 -->
-        <section class="brand-card">
+        <div class="brand-card">
           <img
             class="brand-card__img"
-            src="../img/banner-sm.png"
+            src="../img/login.png"
             alt="灰藍色與米白色休閒鞋，雙色設計，水花濺起照片"
           />
-
-          <div class="brand-card__heading">
-            <h1 class="brand-card__title">URBNSTEP</h1>
-            <p class="brand-card__slogan">Your Step, Your Statement</p>
-          </div>
-        </section>
+          <img
+            class="brand-card__img mobile"
+            src="../img/login-sm.png"
+            alt="灰藍色與米白色休閒鞋，雙色設計，水花濺起照片"
+          />
+        </div>
 
         <!-- 右側 -->
         <section class="auth-card">
           <img
             class="auth-card__bg"
             src="../img/login-bg.png"
-            alt="登入背景色，灰色"
+            alt=""
+            aria-hidden="true"
           />
           <div class="auth-card__content">
             <h2 class="auth-card__title">歡迎！</h2>
@@ -90,12 +95,13 @@
               </li>
             </ul>
 
-            <form class="social-login">
+            <div class="social-login">
               <button type="button" class="social-login__btn">
                 <img
                   class="social-login__logo"
                   src="../img/facebook.svg"
-                  alt="facebook logo"
+                  alt=""
+                  aria-hidden="true"
                 />
                 <span class="social-login__text">Facebook 登入</span>
               </button>
@@ -104,7 +110,8 @@
                 <img
                   class="social-login__logo"
                   src="../img/apple.svg"
-                  alt="apple logo"
+                  alt=""
+                  aria-hidden="true"
                 />
                 <span class="social-login__text">Apple 登入</span>
               </button>
@@ -113,11 +120,12 @@
                 <img
                   class="social-login__logo"
                   src="../img/google.svg"
-                  alt="google logo"
+                  alt=""
+                  aria-hidden="true"
                 />
                 <span class="social-login__text">Google 登入</span>
               </button>
-            </form>
+            </div>
           </div>
         </section>
       </div>
@@ -128,7 +136,9 @@
         <nav>
           <div class="logo-link">
             <div class="logo">
-              <img src="../img/logo.svg" alt="URBNSTEP Logo" />
+              <a href="#">
+                <img src="../img/logo.svg" alt="URBNSTEP Logo" />
+              </a>
             </div>
             <ul class="page-link">
               <li>

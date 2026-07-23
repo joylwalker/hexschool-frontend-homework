@@ -2,14 +2,42 @@
 Instead, 1rem  = 1em =16px */
 
 /***************************/
-/* BELOW 375px (Smaller cellphone) */
+/* BELOW 768px (Tablets) */
 /***************************/
-@media (max-width: 23.5em) {
-  .container {
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 1.2rem;
+@media (max-width: 48em) {
+  /* Hero Section */
+  .hero-section {
+    height: 24rem;
+  }
+
+  .hero-img {
+    display: none;
+  }
+
+  .hero-img.mobile {
+    display: block;
+  }
+
+  .hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+  }
+
+  .page-title {
+    z-index: 2;
+  }
+}
+
+/***************************/
+/* BELOW 576px (Large Mobile) */
+/***************************/
+
+@media (max-width: 36em) {
+  .border-bottom {
+    padding-bottom: 3.2rem;
   }
 
   /* Header Nav */
@@ -17,23 +45,11 @@ Instead, 1rem  = 1em =16px */
     padding: 1.3rem 0;
   }
 
-  .logo-link {
-    width: auto;
-  }
-
   .site-header .page-link {
     display: none;
   }
 
   /* Hero Section */
-  .hero-section {
-    height: 24rem;
-  }
-
-  .hero-img {
-    height: 24rem;
-  }
-
   .page-title h1 {
     font-size: 2.8rem;
   }
@@ -44,29 +60,15 @@ Instead, 1rem  = 1em =16px */
 
   /* Block-quote */
   .block-quote {
-    width: auto;
-    margin: 3.2rem 1.2rem;
+    margin: 3.2rem 0;
     padding: 2.4rem;
     border-radius: 0.4rem;
     text-align: left;
   }
 
-  .block-quote h5 {
-    margin-bottom: 1.2rem;
-  }
-
-  .block-quote p:last-child {
-    margin-bottom: 0;
-  }
-
   /* 品牌簡介 */
   .brand-intro {
     margin-bottom: 3.2rem;
-  }
-
-  .main-img {
-    width: 100%;
-    height: auto;
   }
 
   .brand-intro__content {
@@ -90,14 +92,9 @@ Instead, 1rem  = 1em =16px */
     gap: 0.8rem;
   }
 
-  .border-bottom {
-    padding-bottom: 3.2rem;
-  }
-
   /* 品牌歷程 */
   .brand-history {
     margin-bottom: 3.2rem;
-    padding-bottom: 3.2rem;
   }
 
   .brand-history-title {
@@ -118,7 +115,6 @@ Instead, 1rem  = 1em =16px */
   .brand-concept {
     padding-top: 0;
     margin-bottom: 3.2rem;
-    padding-bottom: 3.2rem;
   }
 
   .brand-concept-title {
@@ -140,7 +136,6 @@ Instead, 1rem  = 1em =16px */
   .brand-side-story {
     padding-top: 0;
     margin-bottom: 3.2rem;
-    padding-bottom: 3.2rem;
   }
 
   .brand-side-story-title {
@@ -150,14 +145,7 @@ Instead, 1rem  = 1em =16px */
   }
 
   /* cta */
-  .cta {
-    width: 100%;
-    /* height: auto; */
-    padding-top: 0;
-  }
-
   .banner {
-    height: 8.8rem;
     gap: 1.6rem;
   }
 
@@ -169,17 +157,12 @@ Instead, 1rem  = 1em =16px */
     padding: 0.8rem 1.6rem;
   }
 
-  .btn--cta:hover {
-    background-color: #495057;
-  }
-
   /* footer */
   .site-footer {
     padding: 3.2rem 0;
   }
 
   .site-footer nav {
-    margin-top: 0;
     flex-direction: column;
   }
 
@@ -187,31 +170,12 @@ Instead, 1rem  = 1em =16px */
     flex-direction: column;
     gap: 0.8rem;
     align-items: flex-start;
-    justify-content: center;
-  }
-
-  .site-footer .logo {
-    padding: 0.8rem 0;
-  }
-
-  .site-footer .logo img {
-    width: 10.5rem;
-    height: 3rem;
-    padding: 0;
   }
 
   .site-footer .page-link {
     margin: 0;
+    padding-left: 1.2rem;
     flex-direction: column;
     gap: 0.4rem;
-    padding-left: 1.2rem;
-  }
-
-  .site-footer .page-link a {
-    padding-top: 1.2rem;
-  }
-
-  .copyright {
-    margin-bottom: 0;
   }
 }
