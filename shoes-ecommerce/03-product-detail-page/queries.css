@@ -130,11 +130,22 @@ Instead, 1rem  = 1em =16px */
   .product-card-grid {
     gap: 1.6rem;
     grid-template-columns: none;
-    /* 商品往右排列 */
-    grid-auto-flow: column;
-    /* 每張卡片所在欄位寬 30rem */
-    grid-auto-columns: 30rem;
-    overflow: hidden;
+    grid-auto-flow: column; /* 商品往右排列 */
+    grid-auto-columns: min(80%, 30rem);
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain; /* 水平輪播 */
+
+    scrollbar-width: none; /* 隱藏 Firefox 捲軸 */
+  }
+
+  .product-card-grid::-webkit-scrollbar {
+    display: none; /* 隱藏 Chrome／Safari 捲軸 */
+  }
+
+  .product-card-grid > .product-card {
+    scroll-snap-align: start;
   }
 
   /* cta */

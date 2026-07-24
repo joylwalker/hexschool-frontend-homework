@@ -178,4 +178,9 @@ Instead, 1rem  = 1em =16px */
     flex-direction: column;
     gap: 0.4rem;
   }
+
+  .site-footer .page-link a {
+    display: block;
+    padding: 1.2rem 0;
+  }
 }
