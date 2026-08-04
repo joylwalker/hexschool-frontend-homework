@@ -1,0 +1,18 @@
+.logo {
+  width: 152px;
+}
+
+.header-search {
+  width: 300px;
+}
+
+.header-icon-btn {
+  .bi {
+    display: block;
+    font-size: 24px;
+  }
+
+  .bi::before {
+    display: block;
+  }
+}

@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <title>AI 工具商店</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+
+    <main class="bg-light">
+      <div class="container py-4 py-lg-5">
+        <div class="row gy-3">
+          <div class="col-lg-3">
+            <div class="list-group">
+              <div class="list-group-item py-4 py-lg-5 text-center">
+                <img
+                  src="../assets/images/avatar.png"
+                  alt="avatar"
+                  class="mb-3"
+                />
+                <h3 class="h4 mb-2">Josh</h3>
+                <p class="text-secondary mb-2 text-sm">helloworld@gmail.com</p>
+                <span
+                  class="badge text-bg-success fw-normal px-2 py-1 lh-base rounded-3"
+                  >已驗證</span
+                >
+              </div>
+              <button
+                data-bs-toggle="tab"
+                data-bs-target="#profile-tab-pane"
+                type="button"
+                class="list-group-item list-group-item-action active member-profile__action px-3"
+                aria-current="true"
+              >
+                <i class="bi bi-person me-2"></i>個人資料
+              </button>
+              <button
+                data-bs-toggle="tab"
+                data-bs-target="#upload-tab-pane"
+                type="button"
+                class="list-group-item list-group-item-action member-profile__action px-3"
+              >
+                <i class="bi bi-laptop me-2"></i>我上架的 AI 工具
+              </button>
+              <button
+                data-bs-toggle="tab"
+                data-bs-target="#subscribe-tab-pane"
+                type="button"
+                class="list-group-item list-group-item-action member-profile__action px-3"
+              >
+                <i class="bi bi-list-ul me-2"></i>我訂閱的 AI 工具
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-9">
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="profile-tab-pane"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+                tabindex="0"
+              >
+                <form>
+                  <div class="bg-white p-5 rounded-12 mb-4">
+                    <h2 class="h4 mb-4">基本資料</h2>
+                    <div class="row gy-4">
+                      <div class="col-lg-6">
+                        <label for="userName" class="form-label mb-1"
+                          >姓名<span class="text-danger ms-1">*</span></label
+                        >
+                        <input
+                          type="text"
+                          class="form-control px-13 py-9 rounded-6"
+                          id="userName"
+                          placeholder="請輸入你的名字"
+                          value="Josh"
+                          required
+                        />
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="nickName" class="form-label mb-1"
+                          >暱稱</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control px-13 py-9 rounded-6"
+                          id="nickName"
+                          placeholder="請輸入你的暱稱"
+                        />
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="birthday" class="form-label mb-1"
+                          >生日<span class="text-danger ms-1">*</span></label
+                        >
+                        <input
+                          type="date"
+                          class="form-control px-13 py-9 rounded-6"
+                          id="birthday"
+                          placeholder="請選擇日期"
+                          required
+                        />
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="email" class="form-label mb-1"
+                          >聯絡信箱<span class="text-danger ms-1"
+                            >*</span
+                          ></label
+                        >
+                        <input
+                          type="email"
+                          class="form-control px-13 py-9 rounded-6"
+                          id="email"
+                          placeholder="請輸入你的信箱"
+                          value="helloworld@gmail.com"
+                          required
+                        />
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="phone" class="form-label mb-1"
+                          >聯絡電話<span class="text-danger ms-1"
+                            >*</span
+                          ></label
+                        >
+                        <input
+                          type="tel"
+                          class="form-control px-13 py-9 rounded-6"
+                          id="phone"
+                          placeholder="0912345678"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-white p-5 rounded-3 mb-4">
+                    <h2 class="h4 mb-2">通知設定</h2>
+                    <p class="text-sm text-secondary mb-4">
+                      通知將寄送到 helloworld@gmail.com
+                      ，如需變更，請至頁面上方的基本資料修改聯絡信箱
+                    </p>
+                    <div class="mb-4">
+                      <div class="form-check mb-1">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="feedback"
+                        />
+                        <label class="form-check-label" for="feedback">
+                          工具評價與回饋
+                        </label>
+                      </div>
+                      <p class="text-sm text-secondary">
+                        即時掌握使用者留下的評價和回饋
+                      </p>
+                    </div>
+
+                    <div class="mb-4">
+                      <div class="form-check mb-1">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="tool"
+                        />
+                        <label class="form-check-label" for="tool">
+                          AI 趨勢與最新工具
+                        </label>
+                      </div>
+                      <p class="text-sm text-secondary">
+                        推薦適合你的新 AI 工具
+                      </p>
+                    </div>
+
+                    <div class="mb-4">
+                      <div class="form-check mb-1">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="update"
+                        />
+                        <label class="form-check-label" for="update">
+                          工具功能更新
+                        </label>
+                      </div>
+                      <p class="text-sm text-secondary">
+                        當你訂閱的 AI 工具有新功能或重要更新時，我們會寄信通知你
+                      </p>
+                    </div>
+
+                    <div>
+                      <div class="form-check mb-1">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="activity"
+                        />
+                        <label class="form-check-label" for="activity">
+                          活動與優惠資訊
+                        </label>
+                      </div>
+                      <p class="text-sm text-secondary">
+                        把握平台限時優惠與活動資訊
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="text-end">
+                    <button
+                      type="button"
+                      class="btn btn-primary rounded-pill px-4 py-2"
+                    >
+                      儲存
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="upload-tab-pane"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+                tabindex="0"
+              >
+                <div class="p-4 p-lg-5 bg-white rounded-3">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-4"
+                  >
+                    <h2 class="h4">我上架的 AI 工具</h2>
+                    <button
+                      type="button"
+                      class="btn btn-primary rounded-pill px-4 py-2"
+                    >
+                      上架工具
+                    </button>
+                  </div>
+
+                  <!-- Tables -->
+                  <div class="text-nowrap overflow-x-auto">
+                    <table class="table">
+                      <thead>
+                        <tr class="border-dark">
+                          <th class="fw-normal">工具名稱</th>
+                          <th class="fw-normal">工具類型</th>
+                          <th class="fw-normal">訂閱人數</th>
+                          <th class="fw-normal">狀態</th>
+                          <th class="fw-normal">操作</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>AutoTasker</td>
+                          <td>生產力工具</td>
+                          <td>38</td>
+                          <td>
+                            <span
+                              class="badge text-bg-success text-sm fw-normal lh-base px-2 py-1 rounded-3"
+                              >已上架</span
+                            >
+                          </td>
+                          <td>
+                            <a href="#" class="link-primary">查看訂閱用戶</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>PromptCraft</td>
+                          <td>內容生成</td>
+                          <td>0</td>
+                          <td>
+                            <span
+                              class="badge text-bg-warning text-sm fw-normal lh-base px-2 py-1 rounded-3"
+                              >審核中</span
+                            >
+                          </td>
+                          <td>
+                            <a href="#" class="link-primary">查看訂閱用戶</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>SEO Radar</td>
+                          <td>資料分析</td>
+                          <td>125</td>
+                          <td>
+                            <span
+                              class="badge text-bg-warning text-sm fw-normal lh-base px-2 py-1 rounded-3"
+                              >審核中</span
+                            >
+                          </td>
+                          <td>
+                            <a href="#" class="link-primary">查看訂閱用戶</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 我訂閱的 AI 工具內容 -->
+              <!-- <div
+                class="tab-pane fade"
+                id="subscribe-tab-pane"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+                tabindex="0"
+              ></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
