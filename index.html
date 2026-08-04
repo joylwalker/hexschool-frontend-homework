@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <title>AI 工具商店</title>
+    <script type="module" crossorigin src="/hexschool-frontend-homework/assets/main-BeV3X8nN.js"></script>
+    <link rel="stylesheet" crossorigin href="/hexschool-frontend-homework/assets/main-wfJRxpsV.css">
+  </head>
+  <body>
+    <header class="site-header">
+  <nav class="navbar navbar-expand-lg py-0">
+    <!-- 第一排 Header -->
+    <div class="w-100 border-bottom">
+      <div class="container px-3 py-12 d-flex align-items-center">
+        <a class="navbar-brand" href="#">
+          <img src="/hexschool-frontend-homework/assets/Logo-BVlqBbcd.png" alt="Logo" class="logo" />
+        </a>
+
+        <div class="d-flex d-lg-none align-items-center gap-2 ms-auto">
+          <!-- 手機搜尋按鈕 -->
+          <button
+            class="btn header-icon-btn border-0 p-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileSearch"
+            aria-controls="mobileSearch"
+            aria-expanded="false"
+            aria-label="開啟搜尋欄"
+          >
+            <i class="bi bi-search btn-search" aria-hidden="true"></i>
+          </button>
+
+          <!-- 手機選單按鈕 -->
+          <button
+            class="navbar-toggler header-icon-btn border-0 p-2"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#mobileToolMenu"
+            aria-controls="mobileToolMenu"
+            aria-label="開啟選單"
+          >
+            <i class="bi bi-list" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- 桌機版 Dropdown -->
+          <div class="navbar-nav me-3 mb-2 mb-lg-0">
+            <div class="nav-item dropdown">
+              <a
+                class="nav-link"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                探索 AI 工具<i class="bi bi-chevron-down ms-2"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">內容生成</a></li>
+                <li><a class="dropdown-item" href="#">視覺設計</a></li>
+                <li><a class="dropdown-item" href="#">影像製作</a></li>
+                <li><a class="dropdown-item" href="#">程式開發</a></li>
+                <li><a class="dropdown-item" href="#">教育與學習</a></li>
+                <li><a class="dropdown-item" href="#">資料分析</a></li>
+                <li><a class="dropdown-item" href="#">生產力工具</a></li>
+                <li><a class="dropdown-item" href="#">音樂創作</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- 桌機版搜尋欄 -->
+          <div class="input-group header-search me-auto mb-3 mb-lg-0">
+            <input
+              type="text"
+              class="form-control py-2"
+              placeholder="輸入工具名稱、功能或關鍵字"
+              aria-label="輸入工具名稱、功能或關鍵字"
+            />
+            <button class="btn bg-secondary-subtle" type="button">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+          <!-- 桌機版會員中心 -->
+          <button
+            type="button"
+            class="btn btn-outline-primary rounded-pill px-4 py-2"
+          >
+            <i class="bi bi-person me-2"></i> 會員中心
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapse d-lg-none w-100" id="mobileSearch">
+      <div class="container py-12 border-bottom">
+        <div class="d-flex align-items-center gap-1">
+          <div class="input-group flex-grow-1">
+            <input
+              type="search"
+              class="form-control py-2"
+              id="mobileSearchInput"
+              name="mobileSearchInput"
+              placeholder="輸入工具名稱、功能或關鍵字"
+              aria-label="輸入工具名稱、功能或關鍵字"
+            />
+
+            <button
+              class="btn bg-secondary-subtle p-12 lh-1"
+              type="button"
+              aria-label="搜尋"
+            >
+              <i class="bi bi-search" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <button
+            class="btn header-icon-btn border-0 p-2 flex-shrink-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mobileSearch"
+            aria-controls="mobileSearch"
+            aria-label="關閉搜尋欄"
+          >
+            <i class="bi bi-x"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- 手機版 offcanvas 選單 -->
+  <div
+    class="offcanvas offcanvas-end mobile-tool-menu"
+    tabindex="-1"
+    id="mobileToolMenu"
+    aria-labelledby="mobileToolMenuLabel"
+  >
+    <div class="offcanvas-header justify-content-end mt-4 me-4 p-0">
+      <button
+        type="button"
+        class="btn header-icon-btn border-0 p-2"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      >
+        <i class="bi bi-x close-icon" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="offcanvas-body d-flex flex-column p-0 mx-4 my-3">
+      <ul class="list-unstyled mb-0 d-flex flex-column gap-2 mb-3">
+        <li>
+          <h3
+            class="offcanvas-title h6 fw-bold lh-12 p-12 border-bottom"
+            id="mobileToolMenuLabel"
+          >
+            探索 AI 工具
+          </h3>
+        </li>
+        <li>
+          <a
+            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
+            href="#"
+            >內容生成</a
+          >
+        </li>
+        <li>
+          <a
+            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
+            href="#"
+            >視覺設計</a
+          >
+        </li>
+        <li>
+          <a
+            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
+            href="#"
+            >影像製作</a
+          >
+        </li>
+        <li>
+          <a
+            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
+            href="#"
+            >程式開發</a
+          >
+        </li>
+        <li>
+          <a
+            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
+            href="#"
+            >教育與學習</a
+          >
+        </li>
+        <li>
+          <a
+            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
+            href="#"
+            >資料分析</a
+          >
+        </li>
+        <li>
+          <a
+            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
+            href="#"
+            >生產力工具</a
+          >
+        </li>
+        <li>
+          <a
+            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
+            href="#"
+            >音樂創作</a
+          >
+        </li>
+      </ul>
+      <a href="#" class="btn btn-primary rounded-pill py-2 mt-auto">
+        <i class="bi bi-person me-1"></i> <span>會員中心</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+    <main class="bg-light">
+      <div class="container py-4 py-lg-5">
+        <div class="row gy-3">
+          <div class="col-lg-3">
+            <div class="list-group">
+              <div class="list-group-item py-4 py-lg-5 text-center">
+                <img
+                  src="/hexschool-frontend-homework/assets/avatar-CV3pqSuS.png"
+                  alt="avatar"
+                  class="mb-3"
+                />
+                <h3 class="h4 mb-2">Josh</h3>
+                <p class="text-secondary mb-2 text-sm">helloworld@gmail.com</p>
+                <span
+                  class="badge text-bg-success fw-normal px-2 py-1 lh-base rounded-3"
+                  >已驗證</span
+                >
+              </div>
+              <button
+                data-bs-toggle="tab"
+                data-bs-target="#profile-tab-pane"
+                type="button"
+                class="list-group-item list-group-item-action active member-profile__action px-3"
+                aria-current="true"
+              >
+                <i class="bi bi-person me-2"></i>個人資料
+              </button>
+              <button
+                data-bs-toggle="tab"
+                data-bs-target="#upload-tab-pane"
+                type="button"
+                class="list-group-item list-group-item-action member-profile__action px-3"
+              >
+                <i class="bi bi-laptop me-2"></i>我上架的 AI 工具
+              </button>
+              <button
+                data-bs-toggle="tab"
+                data-bs-target="#subscribe-tab-pane"
+                type="button"
+                class="list-group-item list-group-item-action member-profile__action px-3"
+              >
+                <i class="bi bi-list-ul me-2"></i>我訂閱的 AI 工具
+              </button>
+            </div>
+          </div>
+
+          <div class="col-lg-9">
+            <div class="tab-content" id="myTabContent">
+              <div
+                class="tab-pane fade show active"
+                id="profile-tab-pane"
+                role="tabpanel"
+                aria-labelledby="home-tab"
+                tabindex="0"
+              >
+                <form>
+                  <div class="bg-white p-5 rounded-12 mb-4">
+                    <h2 class="h4 mb-4">基本資料</h2>
+                    <div class="row gy-4">
+                      <div class="col-lg-6">
+                        <label for="userName" class="form-label mb-1"
+                          >姓名<span class="text-danger ms-1">*</span></label
+                        >
+                        <input
+                          type="text"
+                          class="form-control px-13 py-9 rounded-6"
+                          id="userName"
+                          placeholder="請輸入你的名字"
+                          value="Josh"
+                          required
+                        />
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="nickName" class="form-label mb-1"
+                          >暱稱</label
+                        >
+                        <input
+                          type="text"
+                          class="form-control px-13 py-9 rounded-6"
+                          id="nickName"
+                          placeholder="請輸入你的暱稱"
+                        />
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="birthday" class="form-label mb-1"
+                          >生日<span class="text-danger ms-1">*</span></label
+                        >
+                        <input
+                          type="date"
+                          class="form-control px-13 py-9 rounded-6"
+                          id="birthday"
+                          placeholder="請選擇日期"
+                          required
+                        />
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="email" class="form-label mb-1"
+                          >聯絡信箱<span class="text-danger ms-1"
+                            >*</span
+                          ></label
+                        >
+                        <input
+                          type="email"
+                          class="form-control px-13 py-9 rounded-6"
+                          id="email"
+                          placeholder="請輸入你的信箱"
+                          value="helloworld@gmail.com"
+                          required
+                        />
+                      </div>
+                      <div class="col-lg-6">
+                        <label for="phone" class="form-label mb-1"
+                          >聯絡電話<span class="text-danger ms-1"
+                            >*</span
+                          ></label
+                        >
+                        <input
+                          type="tel"
+                          class="form-control px-13 py-9 rounded-6"
+                          id="phone"
+                          placeholder="0912345678"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bg-white p-5 rounded-3 mb-4">
+                    <h2 class="h4 mb-2">通知設定</h2>
+                    <p class="text-sm text-secondary mb-4">
+                      通知將寄送到 helloworld@gmail.com
+                      ，如需變更，請至頁面上方的基本資料修改聯絡信箱
+                    </p>
+                    <div class="mb-4">
+                      <div class="form-check mb-1">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="feedback"
+                        />
+                        <label class="form-check-label" for="feedback">
+                          工具評價與回饋
+                        </label>
+                      </div>
+                      <p class="text-sm text-secondary">
+                        即時掌握使用者留下的評價和回饋
+                      </p>
+                    </div>
+
+                    <div class="mb-4">
+                      <div class="form-check mb-1">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="tool"
+                        />
+                        <label class="form-check-label" for="tool">
+                          AI 趨勢與最新工具
+                        </label>
+                      </div>
+                      <p class="text-sm text-secondary">
+                        推薦適合你的新 AI 工具
+                      </p>
+                    </div>
+
+                    <div class="mb-4">
+                      <div class="form-check mb-1">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="update"
+                        />
+                        <label class="form-check-label" for="update">
+                          工具功能更新
+                        </label>
+                      </div>
+                      <p class="text-sm text-secondary">
+                        當你訂閱的 AI 工具有新功能或重要更新時，我們會寄信通知你
+                      </p>
+                    </div>
+
+                    <div>
+                      <div class="form-check mb-1">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="activity"
+                        />
+                        <label class="form-check-label" for="activity">
+                          活動與優惠資訊
+                        </label>
+                      </div>
+                      <p class="text-sm text-secondary">
+                        把握平台限時優惠與活動資訊
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="text-end">
+                    <button
+                      type="button"
+                      class="btn btn-primary rounded-pill px-4 py-2"
+                    >
+                      儲存
+                    </button>
+                  </div>
+                </form>
+              </div>
+
+              <div
+                class="tab-pane fade"
+                id="upload-tab-pane"
+                role="tabpanel"
+                aria-labelledby="profile-tab"
+                tabindex="0"
+              >
+                <div class="p-4 p-lg-5 bg-white rounded-3">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-4"
+                  >
+                    <h2 class="h4">我上架的 AI 工具</h2>
+                    <button
+                      type="button"
+                      class="btn btn-primary rounded-pill px-4 py-2"
+                    >
+                      上架工具
+                    </button>
+                  </div>
+
+                  <!-- Tables -->
+                  <div class="text-nowrap overflow-x-auto">
+                    <table class="table">
+                      <thead>
+                        <tr class="border-dark">
+                          <th class="fw-normal">工具名稱</th>
+                          <th class="fw-normal">工具類型</th>
+                          <th class="fw-normal">訂閱人數</th>
+                          <th class="fw-normal">狀態</th>
+                          <th class="fw-normal">操作</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>AutoTasker</td>
+                          <td>生產力工具</td>
+                          <td>38</td>
+                          <td>
+                            <span
+                              class="badge text-bg-success text-sm fw-normal lh-base px-2 py-1 rounded-3"
+                              >已上架</span
+                            >
+                          </td>
+                          <td>
+                            <a href="#" class="link-primary">查看訂閱用戶</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>PromptCraft</td>
+                          <td>內容生成</td>
+                          <td>0</td>
+                          <td>
+                            <span
+                              class="badge text-bg-warning text-sm fw-normal lh-base px-2 py-1 rounded-3"
+                              >審核中</span
+                            >
+                          </td>
+                          <td>
+                            <a href="#" class="link-primary">查看訂閱用戶</a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>SEO Radar</td>
+                          <td>資料分析</td>
+                          <td>125</td>
+                          <td>
+                            <span
+                              class="badge text-bg-warning text-sm fw-normal lh-base px-2 py-1 rounded-3"
+                              >審核中</span
+                            >
+                          </td>
+                          <td>
+                            <a href="#" class="link-primary">查看訂閱用戶</a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 我訂閱的 AI 工具內容 -->
+              <!-- <div
+                class="tab-pane fade"
+                id="subscribe-tab-pane"
+                role="tabpanel"
+                aria-labelledby="contact-tab"
+                tabindex="0"
+              ></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer py-32 py-md-64">
+  <nav class="navbar navbar-expand py-0">
+    <div class="container-md">
+      <div class="w-100">
+        <!-- Logo & Subscribe -->
+        <div class="d-flex flex-column flex-md-row mb-4">
+          <a class="navbar-brand py-0 mb-4 mb-lg-0" href="#">
+            <img src="/hexschool-frontend-homework/assets/Logo-BVlqBbcd.png" alt="Logo" class="logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#footerSupportedContent"
+            aria-controls="footerSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse flex-column align-items-stretch flex-grow-0 ms-md-auto"
+            id="footerSupportedContent"
+          >
+            <p class="text-white text-start mb-2">
+              訂閱我們，掌握最新 AI 工具與趨勢
+            </p>
+            <div class="input-group header-search">
+              <input
+                type="text"
+                class="form-control py-2"
+                placeholder="helloworld@gmail.com"
+                aria-label="helloworld@gmail.com"
+              />
+              <button
+                class="btn bg-primary text-white rounded-end"
+                type="button"
+              >
+                訂閱
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Copyright -->
+        <div class="copyright text-center pt-4">
+          <p class="mb-1">Copyright ©2026 AI ToolVerse</p>
+          <p>All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
