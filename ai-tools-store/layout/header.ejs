@@ -1,211 +1,145 @@
-<header class="site-header">
-  <nav class="navbar navbar-expand-lg py-0">
-    <!-- 第一排 Header -->
-    <div class="w-100 border-bottom">
-      <div class="container px-3 py-12 d-flex align-items-center">
-        <a class="navbar-brand" href="#">
-          <img src="../assets/images/Logo.png" alt="Logo" class="logo" />
-        </a>
+<nav class="navbar navbar-expand-lg fixed-top py-3 py-lg-4">
+  <div class="container justify-content-start">
+    <a class="navbar-brand p-0 me-5" href="./index.html">
+      <img src="../assets/images/Logo.png" alt="logo" class="logo" />
+    </a>
 
-        <div class="d-flex d-lg-none align-items-center gap-2 ms-auto">
-          <!-- 手機搜尋按鈕 -->
-          <button
-            class="btn header-icon-btn border-0 p-2"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mobileSearch"
-            aria-controls="mobileSearch"
-            aria-expanded="false"
-            aria-label="開啟搜尋欄"
-          >
-            <i class="bi bi-search btn-search" aria-hidden="true"></i>
-          </button>
+    <button
+      class="btn p-2 d-lg-none ms-auto me-1"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseExample"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+    >
+      <i class="bi bi-search text-white"></i>
+    </button>
 
-          <!-- 手機選單按鈕 -->
-          <button
-            class="navbar-toggler header-icon-btn border-0 p-2"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#mobileToolMenu"
-            aria-controls="mobileToolMenu"
-            aria-label="開啟選單"
-          >
-            <i class="bi bi-list" aria-hidden="true"></i>
-          </button>
-        </div>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <!-- 桌機版 Dropdown -->
-          <div class="navbar-nav me-3 mb-2 mb-lg-0">
-            <div class="nav-item dropdown">
-              <a
-                class="nav-link"
-                href="#"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                探索 AI 工具<i class="bi bi-chevron-down ms-2"></i>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">內容生成</a></li>
-                <li><a class="dropdown-item" href="#">視覺設計</a></li>
-                <li><a class="dropdown-item" href="#">影像製作</a></li>
-                <li><a class="dropdown-item" href="#">程式開發</a></li>
-                <li><a class="dropdown-item" href="#">教育與學習</a></li>
-                <li><a class="dropdown-item" href="#">資料分析</a></li>
-                <li><a class="dropdown-item" href="#">生產力工具</a></li>
-                <li><a class="dropdown-item" href="#">音樂創作</a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- 桌機版搜尋欄 -->
-          <div class="input-group header-search me-auto mb-3 mb-lg-0">
-            <input
-              type="text"
-              class="form-control py-2"
-              placeholder="輸入工具名稱、功能或關鍵字"
-              aria-label="輸入工具名稱、功能或關鍵字"
-            />
-            <button class="btn bg-secondary-subtle" type="button">
-              <i class="bi bi-search"></i>
-            </button>
-          </div>
-          <!-- 桌機版會員中心 -->
-          <button
-            type="button"
-            class="btn btn-outline-primary rounded-pill px-4 py-2"
-          >
-            <i class="bi bi-person me-2"></i> 會員中心
-          </button>
-        </div>
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <i class="bi bi-list text-white"></i>
+    </button>
+    <div
+      class="offcanvas offcanvas-end p-5 p-lg-0 bg-white bg-opacity-8 border-white border-opacity-12 flex-grow-0"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header p-0 mb-4">
+        <button
+          type="button"
+          class="btn ms-auto p-2"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
       </div>
-    </div>
-
-    <div class="collapse d-lg-none w-100" id="mobileSearch">
-      <div class="container py-12 border-bottom">
-        <div class="d-flex align-items-center gap-1">
-          <div class="input-group flex-grow-1">
-            <input
-              type="search"
-              class="form-control py-2"
-              id="mobileSearchInput"
-              name="mobileSearchInput"
-              placeholder="輸入工具名稱、功能或關鍵字"
-              aria-label="輸入工具名稱、功能或關鍵字"
-            />
-
-            <button
-              class="btn bg-secondary-subtle p-12 lh-1"
-              type="button"
-              aria-label="搜尋"
+      <div class="offcanvas-body p-0">
+        <div
+          class="navbar-nav d-flex flex-column justify-content-between h-100"
+        >
+          <div class="nav-item dropdown me-4">
+            <a
+              class="nav-link d-none d-lg-block px-4"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
             >
-              <i class="bi bi-search" aria-hidden="true"></i>
-            </button>
+              探索 AI 工具<i class="bi bi-chevron-down ms-2"></i>
+            </a>
+            <p
+              class="h6 d-lg-none p-3 border-bottom border-white border-opacity-12 mb-2"
+            >
+              探索 AI 工具
+            </p>
+            <ul
+              class="dropdown-menu bg-transparent bg-lg-white bg-opacity-lg-8 py-0 p-lg-2"
+            >
+              <li>
+                <a class="dropdown-item rounded-1 p-2 mb-2" href="#"
+                  >內容生成</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item rounded-1 p-2 mb-2" href="#"
+                  >視覺設計</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item rounded-1 p-2 mb-2" href="#"
+                  >影像製作</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item rounded-1 p-2 mb-2" href="#"
+                  >程式開發</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item rounded-1 p-2 mb-2" href="#"
+                  >教育與學習</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item rounded-1 p-2 mb-2" href="#"
+                  >資料分析</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item rounded-1 p-2 mb-2" href="#"
+                  >生產力工具</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item rounded-1 p-2" href="#">音樂創作</a>
+              </li>
+            </ul>
           </div>
 
-          <button
-            class="btn header-icon-btn border-0 p-2 flex-shrink-0"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mobileSearch"
-            aria-controls="mobileSearch"
-            aria-label="關閉搜尋欄"
+          <a
+            href="./login.html"
+            class="btn btn-primary rounded-pill py-2 d-lg-none text-decoration-none"
+            >登入/註冊</a
           >
-            <i class="bi bi-x"></i>
-          </button>
         </div>
       </div>
     </div>
-  </nav>
-  <!-- 手機版 offcanvas 選單 -->
-  <div
-    class="offcanvas offcanvas-end mobile-tool-menu"
-    tabindex="-1"
-    id="mobileToolMenu"
-    aria-labelledby="mobileToolMenuLabel"
-  >
-    <div class="offcanvas-header justify-content-end mt-4 me-4 p-0">
-      <button
-        type="button"
-        class="btn header-icon-btn border-0 p-2"
-        data-bs-dismiss="offcanvas"
-        aria-label="Close"
-      >
-        <i class="bi bi-x close-icon" aria-hidden="true"></i>
-      </button>
-    </div>
 
-    <div class="offcanvas-body d-flex flex-column p-0 mx-4 my-3">
-      <ul class="list-unstyled mb-0 d-flex flex-column gap-2 mb-3">
-        <li>
-          <h3
-            class="offcanvas-title h6 fw-bold lh-12 p-12 border-bottom"
-            id="mobileToolMenuLabel"
-          >
-            探索 AI 工具
-          </h3>
-        </li>
-        <li>
-          <a
-            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
-            href="#"
-            >內容生成</a
-          >
-        </li>
-        <li>
-          <a
-            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
-            href="#"
-            >視覺設計</a
-          >
-        </li>
-        <li>
-          <a
-            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
-            href="#"
-            >影像製作</a
-          >
-        </li>
-        <li>
-          <a
-            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
-            href="#"
-            >程式開發</a
-          >
-        </li>
-        <li>
-          <a
-            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
-            href="#"
-            >教育與學習</a
-          >
-        </li>
-        <li>
-          <a
-            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
-            href="#"
-            >資料分析</a
-          >
-        </li>
-        <li>
-          <a
-            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
-            href="#"
-            >生產力工具</a
-          >
-        </li>
-        <li>
-          <a
-            class="d-block text-dark text-decoration-none fs-6 px-3 py-2"
-            href="#"
-            >音樂創作</a
-          >
-        </li>
-      </ul>
-      <a href="#" class="btn btn-primary rounded-pill py-2 mt-auto">
-        <i class="bi bi-person me-1"></i> <span>會員中心</span>
-      </a>
+    <div
+      class="collapse d-lg-block p-3 p-lg-0 position-absolute start-0 end-0 top-100 position-lg-static navbar-collapse"
+      id="collapseExample"
+    >
+      <div class="d-flex gap-1 align-items-center">
+        <div class="position-relative text-neutral-300 flex-grow-1">
+          <i class="bi bi-search position-absolute navbar-control-icon"></i>
+          <input
+            type="search"
+            class="form-control rounded-2 navbar-control-input bg-white"
+            placeholder="輸入工具名稱、功能或關鍵字"
+          />
+        </div>
+        <button
+          class="btn p-2 d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          <i class="bi bi-x-lg text-white"></i>
+        </button>
+      </div>
     </div>
+    <a href="./login.html" class="py-2 text-decoration-none d-none d-lg-block"
+      >登入/註冊</a
+    >
   </div>
-</header>
+</nav>

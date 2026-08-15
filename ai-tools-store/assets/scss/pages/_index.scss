@@ -1,3 +1,152 @@
-.member-profile__action {
-  padding-block: 12px;
+.banner {
+  background-image: url(../images/index-bg/index-hero-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+@media (min-width: 992px) {
+  .banner {
+    .navbar-control-input {
+      min-width: 586px;
+    }
+  }
+}
+
+.category {
+  background:
+    url(../images/index-bg/index-tool-bg-dec.png),
+    url(../images/index-bg/index-tool-bg-mobile.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  .card {
+    background-color: rgba(white, 0.08);
+    border: 1px solid rgba(white, 0.12);
+    backdrop-filter: blur(24px);
+  }
+}
+
+@media (min-width: 992px) {
+  .category {
+    background-image:
+      url(../images/index-bg/index-tool-bg-dec.png),
+      url(../images/index-bg/index-tool-bg.png);
+  }
+}
+
+.popular-tool {
+  background:
+    linear-gradient(to bottom, rgba(16, 12, 36, 1), rgba(17, 13, 37, 0.5)),
+    url(../images/index-bg/landing-highlight-bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  .card {
+    background-color: rgba(white, 0.08);
+    border: 1px solid rgba(white, 0.12);
+    backdrop-filter: blur(24px);
+  }
+}
+
+.latest-tool {
+  background: url(../images/index-bg/index-new-bg-mobile-v2.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  .card {
+    background-color: rgba(white, 0.08);
+    border: 1px solid rgba(white, 0.12);
+    backdrop-filter: blur(24px);
+  }
+
+  .btn-primary {
+    &:hover {
+      background-color: $primary-200;
+      color: $black;
+    }
+
+    &:focus {
+      background-color: $primary-200;
+      border: 2px solid $primary-100;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .latest-tool {
+    background-image: url(../images/index-bg/index-new-bg-v2.png);
+  }
+}
+
+.upload-tool {
+  background: url(../images/index-upload-tool-bg-mobile.png);
+  background-size: cover;
+  background-position: left, right, center, center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  .btn-primary {
+    &:hover {
+      background-color: $primary-200;
+      color: $black;
+    }
+
+    &:focus {
+      background-color: $primary-200;
+      border: 2px solid $primary-100;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .upload-tool {
+    background-image: url(../images/index-upload-tool-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+  }
+}
+
+.accordion-item {
+  background-color: transparent;
+  backdrop-filter: blur(12px);
+}
+
+.accordion-item:has(.accordion-button:not(.collapsed)) {
+  background-color: rgba(white, 0.08);
+}
+
+.accordion-button {
+  background-color: rgba(white, 0.08);
+  padding-block: 16.5px;
+  padding-inline: 16px;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: rgba(white, 0.12);
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+
+.card {
+  &:hover,
+  &:focus {
+    border: 1px solid $primary-100;
+  }
 }

@@ -1,18 +1,24 @@
-.site-footer {
-  background: #212529;
-}
+.footer-navbar {
+  animation: none;
+  background-color: transparent;
+  backdrop-filter: none;
 
-.copyright {
-  color: #bbbbbe;
-  border-top: 1px solid #6c757d;
-}
-
-.py-32 {
-  padding-block: 32px;
-}
-
-@media (min-width: 768px) {
-  .py-md-64 {
-    padding-block: 64px;
+  &::before {
+    content: none;
   }
+
+  .btn-primary {
+    &:hover {
+      background-color: $primary-200;
+      color: $black;
+    }
+
+    &:focus {
+      background-color: $primary-200;
+      border: 2px solid $primary-100;
+    }
+  }
+}
+.copyright {
+  border-top: 1px solid rgba($white, 0.12);
 }

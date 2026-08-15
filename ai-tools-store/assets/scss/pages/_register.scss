@@ -1,0 +1,91 @@
+.register-page {
+  > .navbar {
+    position: relative !important;
+  }
+}
+
+.register {
+  background: url(../images/index-bg/index-tool-bg-mobile.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+
+  .btn-outline-primary {
+    color: $primary-100;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $primary-200;
+      color: $primary-200;
+    }
+
+    &:focus {
+      background-color: $primary-100;
+      color: $black;
+    }
+  }
+
+  .btn-primary {
+    &:hover {
+      background-color: $primary-200;
+      color: $black;
+    }
+
+    &:focus {
+      background-color: $primary-200;
+      border: 2px solid $primary-100;
+    }
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background-color: $neutral-200;
+    }
+  }
+
+  .form-control {
+    &:focus {
+      color: $black;
+      background-color: $white;
+    }
+  }
+
+  .form-check-input {
+    background-color: $white;
+    border: 1px solid $primary-100;
+
+    &:hover {
+      box-shadow: 0 0 0 2px rgba(#b28de9, 0.6);
+    }
+
+    &:checked {
+      box-shadow: none;
+      background-color: $primary-300;
+    }
+  }
+
+  .password-toggle {
+    padding-inline: 11px;
+    padding-block: 13px;
+  }
+}
+
+.register-content {
+  max-width: 416px;
+}
+
+@media (min-width: 992px) {
+  .register {
+    background-image: url(../images/index-bg/index-tool-bg.png);
+    padding-block: 120px;
+  }
+}

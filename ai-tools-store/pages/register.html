@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>register</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+
+  <body class="register-page">
+    <%- include('./layout/header'); -%>
+
+    <main>
+      <section
+        class="register d-flex flex-column justify-content-center align-items-center"
+      >
+        <div class="container">
+          <div class="register-content mx-auto w-100 py-6">
+            <div class="text-center mb-6">
+              <h3 class="fw-bold fs-lg-2 mb-2">歡迎加入 AI ToolVerse</h3>
+              <h4 class="fs-6 fw-normal lh-base text-neutral-200 fs-lg-5">
+                立即建立帳號，開始探索 AI 工具
+              </h4>
+            </div>
+
+            <div class="d-flex flex-column gap-4 mb-6">
+              <button
+                type="button"
+                class="btn btn-outline-primary rounded-pill py-2 d-flex justify-content-center align-items-center gap-2"
+              >
+                <img src="../assets/images/login-google.png" alt="google" />
+                <span>使用 Google 繼續</span>
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-primary rounded-pill py-2 d-flex justify-content-center align-items-center gap-2"
+              >
+                <img src="../assets/images/login-facebook.png" alt="facebook" />
+                <span>使用 Facebook 繼續</span>
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-primary rounded-pill py-2 d-flex justify-content-center align-items-center gap-2"
+              >
+                <img src="../assets/images/login-apple.png" alt="apple" />
+                <span>使用 Apple 繼續</span>
+              </button>
+            </div>
+
+            <div class="divider mb-6">
+              <span class="fs-sm text-neutral-200">或使用 Email 註冊</span>
+            </div>
+
+            <!-- email password -->
+            <div class="mb-4">
+              <label for="email" class="form-label mb-1">電子信箱</label>
+              <input
+                type="email"
+                class="form-control rounded-1 bg-white"
+                id="email"
+                placeholder="請輸入電子信箱"
+              />
+            </div>
+            <div class="mb-4">
+              <label for="password" class="form-label mb-1">密碼</label>
+              <div class="position-relative">
+                <input
+                  type="password"
+                  class="form-control rounded-1 bg-white"
+                  id="password"
+                  placeholder="請輸入密碼"
+                />
+                <button
+                  type="button"
+                  class="password-toggle position-absolute top-0 end-0 h-100 d-flex justify-content-center align-items-center bg-transparent border-0"
+                >
+                  <i class="bi bi-eye-slash"></i>
+                </button>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="password-confirm" class="form-label mb-1"
+                >確認密碼</label
+              >
+              <div class="position-relative">
+                <input
+                  type="password"
+                  class="form-control rounded-1 bg-white"
+                  id="password-confirm"
+                  placeholder="請再次輸入密碼"
+                />
+                <button
+                  type="button"
+                  class="password-toggle position-absolute top-0 end-0 h-100 d-flex justify-content-center align-items-center bg-transparent border-0"
+                >
+                  <i class="bi bi-eye-slash"></i>
+                </button>
+              </div>
+            </div>
+            <div class="mb-6">
+              <div class="form-check mb-0">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="checkChecked"
+                  checked
+                />
+                <label
+                  class="form-check-label text-sm text-neutral-200"
+                  for="checkChecked"
+                >
+                  我同意
+                  <a href="#" class="text-sm text-primary-200">服務條款</a>
+                  與
+                  <a href="#" class="text-sm text-primary-200">隱私政策</a>
+                </label>
+              </div>
+            </div>
+
+            <a
+              href="./index.html"
+              class="btn btn-primary rounded-pill py-2 w-100 mb-6 text-decoration-none"
+              >建立帳號</a
+            >
+
+            <div class="text-center">
+              <span class="text-sm">已經有帳號了？</span>
+              <a href="./login.html" class="text-sm text-primary-200"
+                >立即登入</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
