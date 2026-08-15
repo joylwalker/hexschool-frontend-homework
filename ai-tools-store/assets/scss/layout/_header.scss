@@ -1,0 +1,128 @@
+.logo {
+  width: 152px;
+}
+
+.navbar {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    animation: navbar-background-change forwards;
+    animation-timeline: --page-scroll;
+    animation-range: 0 100vh;
+  }
+
+  > .container {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@keyframes navbar-background-change {
+  from {
+    background-color: transparent;
+    backdrop-filter: none;
+  }
+
+  to {
+    background-color: rgba($black, 0.8);
+    backdrop-filter: blur(24px);
+  }
+}
+
+// 手機版樣式
+.offcanvas-body {
+  .nav-link {
+    color: $white;
+
+    &:hover {
+      color: $primary-100;
+    }
+
+    &:active {
+      color: $primary-200;
+    }
+  }
+
+  .dropdown-menu {
+    display: block;
+    border: none;
+  }
+
+  .dropdown-item:hover {
+    background-color: rgba(white, 0.08);
+  }
+
+  .dropdown-item:active {
+    background-color: rgba(white, 0.08);
+    color: $primary-200;
+  }
+
+  .btn-primary {
+    &:hover {
+      background-color: $primary-200;
+      color: $black;
+    }
+
+    &:focus {
+      background-color: $primary-200;
+      border: 2px solid $primary-100;
+    }
+  }
+}
+
+// 電腦版樣式
+.offcanvas {
+  backdrop-filter: blur(24px);
+}
+
+@media (min-width: 992px) {
+  .offcanvas {
+    backdrop-filter: unset;
+  }
+
+  .offcanvas-body {
+    .dropdown-menu:not(.show) {
+      display: none;
+    }
+
+    .dropdown-menu {
+      border: 1px solid rgba(white, 0.12);
+      backdrop-filter: blur(24px);
+    }
+
+    .dropdown-item {
+      min-width: 224px;
+    }
+  }
+}
+
+.navbar-control-input {
+  min-width: 305px;
+  padding: 9px 45px 9px 37px;
+
+  &::placeholder {
+    color: $neutral-300;
+  }
+}
+
+.navbar-control-icon {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 13px;
+}
+
+.navbar-collapse {
+  background-color: rgba(white, 0.08);
+  border: 1px solid rgba(white, 0.12);
+  backdrop-filter: blur(24px);
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse {
+    background-color: unset;
+    backdrop-filter: unset;
+  }
+}

@@ -1,0 +1,49 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-size": map-merge(
+        map-get($utilities, "font-size"),
+        (
+          responsive: true,
+        )
+      ),
+    "position": map-merge(
+        map-get($utilities, "position"),
+        (
+          responsive: true,
+        )
+      ),
+    "background-color": map-merge(
+        map-get($utilities, "background-color"),
+        (
+          responsive: true,
+        )
+      ),
+    "bg-opacity": map-merge(
+        map-get($utilities, "bg-opacity"),
+        (
+          responsive: true,
+          values: map-merge(
+              map-get(map-get($utilities, "bg-opacity"), "values"),
+              (
+                8: 0.08,
+                12: 0.12,
+              )
+            ),
+        )
+      ),
+    "border-opacity": map-merge(
+        map-get($utilities, "border-opacity"),
+        (
+          responsive: true,
+          values: map-merge(
+              map-get(map-get($utilities, "border-opacity"), "values"),
+              (
+                8: 0.08,
+                12: 0.12,
+              )
+            ),
+        )
+      ),
+  )
+);

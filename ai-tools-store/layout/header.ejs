@@ -1,0 +1,145 @@
+<nav class="navbar navbar-expand-lg fixed-top py-3 py-lg-4">
+  <div class="container justify-content-start">
+    <a class="navbar-brand p-0 me-5" href="./index.html">
+      <img src="../assets/images/Logo.png" alt="logo" class="logo" />
+    </a>
+
+    <button
+      class="btn p-2 d-lg-none ms-auto me-1"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapseExample"
+      aria-expanded="false"
+      aria-controls="collapseExample"
+    >
+      <i class="bi bi-search text-white"></i>
+    </button>
+
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <i class="bi bi-list text-white"></i>
+    </button>
+    <div
+      class="offcanvas offcanvas-end p-5 p-lg-0 bg-white bg-opacity-8 border-white border-opacity-12 flex-grow-0"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header p-0 mb-4">
+        <button
+          type="button"
+          class="btn ms-auto p-2"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <div class="offcanvas-body p-0">
+        <div
+          class="navbar-nav d-flex flex-column justify-content-between h-100"
+        >
+          <div class="nav-item dropdown me-4">
+            <a
+              class="nav-link d-none d-lg-block px-4"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              探索 AI 工具<i class="bi bi-chevron-down ms-2"></i>
+            </a>
+            <p
+              class="h6 d-lg-none p-3 border-bottom border-white border-opacity-12 mb-2"
+            >
+              探索 AI 工具
+            </p>
+            <ul
+              class="dropdown-menu bg-transparent bg-lg-white bg-opacity-lg-8 py-0 p-lg-2"
+            >
+              <li>
+                <a class="dropdown-item rounded-1 p-2 mb-2" href="#"
+                  >內容生成</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item rounded-1 p-2 mb-2" href="#"
+                  >視覺設計</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item rounded-1 p-2 mb-2" href="#"
+                  >影像製作</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item rounded-1 p-2 mb-2" href="#"
+                  >程式開發</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item rounded-1 p-2 mb-2" href="#"
+                  >教育與學習</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item rounded-1 p-2 mb-2" href="#"
+                  >資料分析</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item rounded-1 p-2 mb-2" href="#"
+                  >生產力工具</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item rounded-1 p-2" href="#">音樂創作</a>
+              </li>
+            </ul>
+          </div>
+
+          <a
+            href="./login.html"
+            class="btn btn-primary rounded-pill py-2 d-lg-none text-decoration-none"
+            >登入/註冊</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="collapse d-lg-block p-3 p-lg-0 position-absolute start-0 end-0 top-100 position-lg-static navbar-collapse"
+      id="collapseExample"
+    >
+      <div class="d-flex gap-1 align-items-center">
+        <div class="position-relative text-neutral-300 flex-grow-1">
+          <i class="bi bi-search position-absolute navbar-control-icon"></i>
+          <input
+            type="search"
+            class="form-control rounded-2 navbar-control-input bg-white"
+            placeholder="輸入工具名稱、功能或關鍵字"
+          />
+        </div>
+        <button
+          class="btn p-2 d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapseExample"
+          aria-expanded="false"
+          aria-controls="collapseExample"
+        >
+          <i class="bi bi-x-lg text-white"></i>
+        </button>
+      </div>
+    </div>
+    <a href="./login.html" class="py-2 text-decoration-none d-none d-lg-block"
+      >登入/註冊</a
+    >
+  </div>
+</nav>
