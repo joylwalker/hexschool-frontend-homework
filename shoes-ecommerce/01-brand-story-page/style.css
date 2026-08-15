@@ -361,6 +361,26 @@ ol li {
 
 .btn--cta:hover {
   background-color: #495057;
+  animation: bounce 0.4s ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-8px);
+  }
+
+  50% {
+    transform: translateY(0);
+  }
+
+  75% {
+    transform: translateY(-4px);
+  }
 }
 
 /* footer */
