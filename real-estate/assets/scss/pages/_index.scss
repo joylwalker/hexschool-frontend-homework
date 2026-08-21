@@ -1,0 +1,386 @@
+.banner {
+  min-height: 100vh;
+  background-image: url("/assets/images/index-m_Hero\ Image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 992px) {
+  .banner {
+    background-image: url("/assets/images/index-hero-Image.png");
+  }
+}
+
+.banner-text {
+  max-width: 320px;
+}
+
+.banner-text-bg {
+  background-image: url("/assets/images/bg_stone.png");
+  background-repeat: no-repeat;
+  background-size: 820px 734px;
+  background-position: -253px bottom;
+  padding-bottom: 45px;
+}
+
+@media (min-width: 992px) {
+  .banner-text-bg {
+    background-image: url("/assets/images/bg.png");
+    background-repeat: no-repeat;
+    background-size: 964px 766px;
+    background-position: -104px bottom;
+    padding-bottom: 168px;
+  }
+
+  .banner-text {
+    max-width: 480px;
+  }
+}
+
+.feature {
+  .icon-bg {
+    width: 64px;
+    height: 64px;
+  }
+
+  .feature-item {
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      right: 0;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  }
+
+  .col {
+    &:nth-child(1) .feature-item::before {
+      background-image: url("/assets/images/display2.png");
+      top: -51px;
+      bottom: -51px;
+    }
+    &:nth-child(2) .feature-item::before {
+      background-image: url("/assets/images/display3.png");
+      top: -48px;
+      bottom: -49px;
+    }
+    &:nth-child(3) .feature-item::before {
+      background-image: url("/assets/images/display4.png");
+      top: -32px;
+      bottom: -27px;
+    }
+    &:nth-child(4) .feature-item::before {
+      background-image: url("/assets/images/display5.png");
+      top: -24px;
+      bottom: -25px;
+    }
+  }
+
+  .feature-content {
+    max-width: 279px;
+  }
+}
+
+.title {
+  position: relative;
+  max-width: 343px;
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -28px;
+    bottom: -23px;
+    left: -36px;
+    right: 219px;
+    background-image: url("/assets/images/display1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .feature .col {
+    &:nth-child(1),
+    &:nth-child(2) {
+      .feature-item::before {
+        top: -35px;
+        bottom: -35px;
+        left: -7px;
+        right: -7px;
+      }
+    }
+
+    &:nth-child(3) {
+      .feature-item::before {
+        top: -18px;
+        bottom: -12px;
+        left: -7px;
+        right: -7px;
+      }
+    }
+
+    &:nth-child(4) {
+      .feature-item::before {
+        top: -20px;
+        bottom: -20px;
+        left: -7px;
+        right: -7px;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .feature .col {
+    &:nth-child(1),
+    &:nth-child(2) {
+      .feature-item::before {
+        top: -50px;
+        bottom: -50px;
+        left: -28px;
+        right: -28px;
+      }
+    }
+
+    &:nth-child(3) {
+      .feature-item::before {
+        top: -28px;
+        bottom: -22px;
+        left: -28px;
+        right: -28px;
+      }
+    }
+
+    &:nth-child(4) {
+      .feature-item::before {
+        top: -30px;
+        bottom: -30px;
+        left: -28px;
+        right: -28px;
+      }
+    }
+  }
+}
+
+.tool-icon-wrap {
+  width: 60px;
+  height: 60px;
+}
+
+@media (min-width: 992px) {
+  .tool-icon-wrap {
+    width: 80px;
+    height: 80px;
+  }
+
+  .tool-mask {
+    aspect-ratio: 1;
+    background-image: url("/assets/images/index-tool-image.png");
+    background-attachment: fixed;
+    background-size: auto 100%;
+    background-position: calc(50% - 330px) center;
+    background-repeat: no-repeat;
+
+    mask-image: url("/assets/images/index-tool-mask.png");
+    mask-size: contain;
+    mask-position: center top;
+    mask-repeat: no-repeat;
+  }
+
+  .tool-btn {
+    max-width: 200px;
+  }
+}
+
+.search-select {
+  height: 46px;
+  padding-left: 40px;
+  color: $text-light;
+  border-color: $neutral-400;
+  border-radius: 8px;
+}
+
+.search-select-wrap {
+  flex: 1;
+}
+
+.search-field label {
+  width: 60px;
+}
+
+.search-submit {
+  &:hover {
+    background-color: $primary-light;
+    border: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .search-form {
+    border: 1px solid $neutral-100;
+    border-top-right-radius: 40px;
+  }
+
+  .search-field {
+    width: 100%;
+    max-width: 215.6px;
+  }
+
+  .search-field label {
+    width: auto;
+  }
+
+  .search-select-wrap {
+    width: 100%;
+  }
+
+  .search-submit {
+    width: 100%;
+    max-width: 215.6px;
+    height: 48px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .house-section {
+    position: relative;
+    min-height: 560px;
+  }
+
+  .house-content {
+    position: absolute;
+    z-index: 1;
+
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+
+    width: 38%;
+    max-width: 526px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+
+      width: 160%;
+      aspect-ratio: 895 / 630;
+
+      top: 50%;
+      right: 1%;
+      transform: translateY(-50%);
+
+      background-image: url("/assets/images/stone.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+
+    // 選取某個元素「第一層」裡面的所有子元素
+    > * {
+      transform: translateX(-100px);
+    }
+  }
+
+  .house-image {
+    position: absolute;
+    z-index: 1;
+
+    top: 60px;
+    right: -75px;
+    bottom: -110px;
+
+    width: 58%;
+    max-width: 1023px;
+  }
+
+  .house-content .btn {
+    width: auto !important;
+    max-width: 200px;
+  }
+}
+
+.featured-main {
+  min-height: 207px;
+  background-image:
+    linear-gradient(to right, rgba(35, 46, 26, 0.7), rgba(35, 46, 26, 0.2)),
+    url("/assets/images/index-img_house.png");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.featured-cards {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  // 隱藏 scrollbar
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .house-card {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+  }
+}
+
+.featured-progress {
+  min-width: 200px;
+  height: 4px;
+  background-color: $neutral-200;
+
+  .featured-progress-active {
+    width: 33.3%;
+    height: 100%;
+    background-color: $secondary;
+  }
+}
+
+@media (min-width: 992px) {
+  .featured-count-number {
+    font-size: 96px;
+    line-height: 1.2;
+  }
+
+  .fw-lg-medium {
+    font-weight: 500 !important;
+  }
+
+  .featured-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .featured-count {
+    align-self: flex-end;
+  }
+
+  .featured-cards {
+    .house-card {
+      flex: 0 0 42%;
+    }
+  }
+}
+
+.featured-control {
+  .btn {
+    &:hover,
+    &:active {
+      background-color: $primary-light;
+      border-color: $primary-light;
+    }
+  }
+}

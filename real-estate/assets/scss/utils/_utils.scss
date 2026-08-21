@@ -1,0 +1,71 @@
+.text-gray-black {
+  color: $text-gray-black;
+}
+
+@media (min-width: 992px) {
+  .rounded-lg-4 {
+    border-radius: $border-radius-xl !important;
+  }
+
+  .rounded-lg-6 {
+    border-radius: $border-radius-3xl !important; //32px
+  }
+
+  .bg-lg-white {
+    background-color: $white !important;
+  }
+
+  .fs-lg-1 {
+    font-size: $h1-font-size !important;
+  }
+
+  .fs-lg-2 {
+    font-size: $h2-font-size !important;
+  }
+
+  .fs-lg-3 {
+    font-size: $h3-font-size !important;
+  }
+
+  .fs-lg-4 {
+    font-size: $h4-font-size !important;
+  }
+
+  .fs-lg-5 {
+    font-size: $h5-font-size !important;
+  }
+
+  .fs-lg-6 {
+    font-size: $h6-font-size !important;
+  }
+}
+
+// $utilities: map-merge(
+//   $utilities,
+//   (
+//     "font-size": map-merge(
+//         map-get($utilities, "font-size"),
+//         (
+//           responsive: true,
+//         )
+//       ),
+//     "background-color": map-merge(
+//         map-get($utilities, "background-color"),
+//         (
+//           responsive: true,
+//         )
+//       ),
+//     "rounded": map-merge(
+//         map-get($utilities, "rounded"),
+//         (
+//           responsive: true,
+//           values: map-merge(
+//               map-get(map-get($utilities, "rounded"), values),
+//               (
+//                 6: 2.5rem,
+//               )
+//             ),
+//         )
+//       ),
+//   )
+// );
