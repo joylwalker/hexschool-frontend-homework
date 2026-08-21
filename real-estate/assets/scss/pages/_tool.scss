@@ -1,0 +1,19 @@
+.accordion-button {
+  // 收合狀態
+  &::after {
+    background-image: unset;
+    font-family: "Material Symbols Outlined";
+    line-height: 1;
+    content: "add";
+    font-size: 40px;
+    width: 40px;
+    height: auto;
+    margin-left: 4px;
+  }
+
+  // 展開狀態
+  &:not(.collapsed)::after {
+    background-image: unset;
+    content: "remove";
+  }
+}

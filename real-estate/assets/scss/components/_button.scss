@@ -1,0 +1,13 @@
+.btn-standard {
+  min-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (min-width: 992px) {
+  .btn-standard {
+    min-width: 200px;
+  }
+}
