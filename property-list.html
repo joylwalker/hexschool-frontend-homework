@@ -1,0 +1,1021 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>房屋搜尋列表</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <script type="module" crossorigin src="/hexschool-frontend-homework/assets/main-CtuKQPYX.js"></script>
+    <link rel="stylesheet" crossorigin href="/hexschool-frontend-homework/assets/main-r1M7kB72.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top py-lg-5">
+  <div class="container-fluid px-lg-15">
+    <a class="navbar-brand py-0" href="index.html">
+      <img src="data:image/png;base64,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" alt="logo" class="logo" />
+    </a>
+    <div
+      class="mobile-account-wrapper bg-primary rounded-circle me-2 mx-auto d-lg-none"
+    >
+      <a href="#" class="mobile-account">
+        <span class="material-symbols-outlined fill text-white">person</span>
+      </a>
+    </div>
+    <button
+      class="btn btn-primary rounded-1 d-lg-none collapsed menu-btn"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    ></button>
+    <div
+      class="collapse navbar-collapse pt-2 pt-lg-0 text-center"
+      id="navbarSupportedContent"
+    >
+      <div
+        class="py-9 d-lg-none border-top border-bottom border-neutral-200 mb-7"
+      >
+        <div class="bg-secondary rounded-circle avatar mb-2 mx-auto">
+          <span class="material-symbols-outlined fill text-white">
+            person
+          </span>
+        </div>
+        <p class="text-gray-black fw-bold">訪客</p>
+      </div>
+      <ul
+        class="navbar-nav flex-row mb-11 mb-lg-0 ms-lg-auto bg-lg-white ps-lg-10 pe-lg-9 rounded-lg-4"
+      >
+        <li class="nav-item flex-grow-1 me-lg-9">
+          <a
+            class="nav-link link-primay-dark ps-10 py-5 px-lg-0 py-lg-7 fw-bold"
+            href="../pages/property-list.html"
+            ><span
+              class="material-symbols-outlined d-block fs-3 mb-3 d-lg-none"
+            >
+              search </span
+            >好房查詢</a
+          >
+        </li>
+        <li class="nav-item flex-grow-1 me-lg-10">
+          <a
+            class="nav-link link-primay-dark py-5 pe-10 px-lg-0 py-lg-7 fw-bold"
+            href="#"
+            ><span
+              class="material-symbols-outlined d-block fs-3 mb-3 d-lg-none"
+            >
+              paid </span
+            >房貸試算</a
+          >
+        </li>
+        <li class="nav-item flex-grow-1 d-none d-lg-block my-auto">
+          <a
+            class="btn btn-secondary fw-bold text-white px-7 py-4 lh-1 rounded-3"
+            href="#"
+          >
+            登入 / 註冊</a
+          >
+        </li>
+      </ul>
+      <button
+        type="button"
+        class="btn btn-primary btn-standard fw-bold w-100 rounded-3 mb-5 d-lg-none"
+      >
+        登入 / 註冊
+      </button>
+    </div>
+  </div>
+</nav>
+
+    <main>
+      <section class="listing-hero container p-lg-10">
+        <div class="banner">
+          <div class="banner-content p-5">
+            <h1 class="fw-bold fs-1-m fs-lg-1 text-primary-dark mb-4">
+              好房查詢
+            </h1>
+            <p class="fw-bold fs-5-m fs-lg-5">
+              上千筆精選房源、專業預約看房服務、即時房貸試算，讓您輕鬆找到理想住宅
+            </p>
+          </div>
+        </div>
+
+        <form
+          class="search-form d-flex flex-column flex-lg-row gap-7 mb-11 mx-lg-10 p-5 p-lg-7 align-items-lg-end"
+        >
+          <div
+            class="search-field d-flex flex-lg-column align-items-center gap-2 align-items-lg-start"
+          >
+            <label
+              for="area"
+              class="text-primary-dark fs-sm fw-medium flex-shrink-0"
+              >地區</label
+            >
+
+            <div class="position-relative search-select-wrap">
+              <span
+                class="material-symbols-outlined position-absolute top-50 translate-middle-y search-select-icon text-primary me-1 ms-4"
+              >
+                location_on
+              </span>
+
+              <select
+                id="area"
+                class="form-select search-select w-100 fs-sm fw-medium"
+              >
+                <option selected disabled>請選擇地區</option>
+                <option value="keelung">基隆縣</option>
+                <option value="taipei">台北市</option>
+                <option value="new-taipei">新北市</option>
+                <option value="taoyuan">桃園市</option>
+                <option value="hsinchu">新竹市</option>
+              </select>
+            </div>
+          </div>
+
+          <div
+            class="search-field d-flex flex-lg-column align-items-center gap-2 align-items-lg-start"
+          >
+            <label
+              for="type"
+              class="text-primary-dark fs-sm fw-medium flex-shrink-0"
+              >房型</label
+            >
+
+            <div class="position-relative search-select-wrap">
+              <span
+                class="material-symbols-outlined position-absolute top-50 translate-middle-y search-select-icon text-primary ms-4 me-1"
+              >
+                home
+              </span>
+
+              <select
+                id="type"
+                class="form-select search-select w-100 fs-sm fw-medium"
+              >
+                <option selected disabled>請選擇房型</option>
+                <option value="house">透天</option>
+                <option value="apartment">公寓</option>
+                <option value="mansion">豪宅</option>
+                <option value="villa">別墅</option>
+              </select>
+            </div>
+          </div>
+
+          <div
+            class="search-field d-flex flex-lg-column align-items-center gap-2 align-items-lg-start"
+          >
+            <label
+              for="rooms"
+              class="text-primary-dark fs-sm fw-medium flex-shrink-0"
+              >房間數</label
+            >
+
+            <div class="position-relative search-select-wrap">
+              <span
+                class="material-symbols-outlined position-absolute top-50 translate-middle-y search-select-icon text-primary me-1 ms-4"
+              >
+                bed
+              </span>
+
+              <select
+                id="rooms"
+                class="form-select search-select w-100 fs-sm fw-medium"
+              >
+                <option selected disabled>請選擇房間數</option>
+                <option value="1">1間</option>
+                <option value="2">2間</option>
+                <option value="3">3間</option>
+                <option value="4">4間</option>
+              </select>
+            </div>
+          </div>
+
+          <div
+            class="search-field d-flex flex-lg-column align-items-center gap-2 align-items-lg-start"
+          >
+            <label
+              for="price"
+              class="text-primary-dark fs-sm fw-medium flex-shrink-0"
+              >價格</label
+            >
+
+            <div class="position-relative search-select-wrap">
+              <span
+                class="material-symbols-outlined position-absolute top-50 translate-middle-y search-select-icon text-primary ms-4 me-1"
+              >
+                attach_money
+              </span>
+
+              <select
+                id="price"
+                class="form-select search-select w-100 fs-sm fw-medium"
+              >
+                <option selected disabled>請選擇價格區間</option>
+                <option value="500">500 萬以下</option>
+                <option value="500-1000">500~1000 萬</option>
+                <option value="1000-2000">1000–2000 萬</option>
+                <option value="2000">2000 萬以上</option>
+              </select>
+            </div>
+          </div>
+
+          <button
+            type="submit"
+            class="search-submit btn btn-primary fw-bold rounded-3 py-5 d-flex justify-content-center align-items-center gap-2 px-lg-0"
+          >
+            搜尋房源
+            <span class="material-symbols-outlined fs-7">search</span>
+          </button>
+        </form>
+      </section>
+
+      <!-- 房源列表 -->
+      <section class="property-list-section container py-11 py-lg-18">
+        <!-- 標題 -->
+        <div
+          class="property-list-header mb-10 d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-end gap-lg-7 mb-lg-15"
+        >
+          <div class="property-title mb-10 mb-lg-0">
+            <h2 class="fw-bold fs-2-m fs-lg-2 text-primary-dark mb-4 mb-lg-5">
+              精選房源
+            </h2>
+            <p class="fw-bold fs-5-m fs-lg-6 mb-0">為您精心挑選的優質物件</p>
+          </div>
+
+          <!-- 篩選 -->
+          <div class="property-filter d-flex gap-5">
+            <button class="btn btn-primary rounded-pill fw-bold px-10 py-2">
+              全部
+            </button>
+            <button
+              class="btn border-primary rounded-pill fw-bold px-10 py-2 text-primary"
+            >
+              透天
+            </button>
+            <button
+              class="btn border-primary rounded-pill fw-bold px-10 py-2 text-primary"
+            >
+              公寓
+            </button>
+            <button
+              class="btn border-primary rounded-pill fw-bold px-10 py-2 text-primary"
+            >
+              大樓
+            </button>
+            <button
+              class="btn border-primary rounded-pill fw-bold px-10 py-2 text-primary"
+            >
+              別墅
+            </button>
+          </div>
+        </div>
+
+        <!-- 卡片列表 -->
+        <div
+          class="row row-cols-1 row-cols-lg-3 gx-lg-7 gy-lg-13 property-grid mb-13 mb-lg-15"
+        >
+          <div class="col">
+            <article class="house-card">
+              <div class="position-relative mb-4">
+                <img
+                  src="/hexschool-frontend-homework/assets/search-house1-BLw1m9FQ.png"
+                  alt="景觀別墅"
+                  class="rounded-5"
+                />
+
+                <span
+                  class="position-absolute bottom-0 end-0 fw-medium bg-white text-primary-dark rounded-pill px-6 py-1 m-5"
+                >
+                  別墅
+                </span>
+              </div>
+
+              <div>
+                <div
+                  class="d-flex justify-content-between align-items-center gap-2 mb-4"
+                >
+                  <h3 class="text-dark fs-5-m fs-lg-5 fw-bold mb-0">
+                    景觀別墅
+                  </h3>
+
+                  <span class="fs-sm fw-medium d-flex align-items-center">
+                    <span class="material-symbols-outlined fs-6 text-primary">
+                      location_on
+                    </span>
+                    台北市信義區
+                  </span>
+                </div>
+
+                <p class="fs-5-m fw-bold text-primary mb-7">
+                  NT$
+                  <span class="fw-bold fs-3-m fs-lg-3 text-primary-dark">
+                    950
+                  </span>
+                  萬
+                </p>
+
+                <div class="d-flex gap-2">
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >bed</span
+                    >
+                    3
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >shower</span
+                    >
+                    2
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >crop_square</span
+                    >
+                    45坪
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="house-card">
+              <div class="position-relative mb-4">
+                <img
+                  src="/hexschool-frontend-homework/assets/search-house2-COa3W3mY.png"
+                  alt="溫馨透天"
+                  class="rounded-5"
+                />
+
+                <span
+                  class="position-absolute bottom-0 end-0 fw-medium bg-white text-primary-dark rounded-pill px-6 py-1 m-5"
+                >
+                  透天
+                </span>
+              </div>
+
+              <div>
+                <div
+                  class="d-flex justify-content-between align-items-center gap-2 mb-4"
+                >
+                  <h3 class="text-dark fs-5-m fs-lg-5 fw-bold mb-0">
+                    溫馨透天
+                  </h3>
+
+                  <span class="fs-sm fw-medium d-flex align-items-center">
+                    <span class="material-symbols-outlined fs-6 text-primary">
+                      location_on
+                    </span>
+                    台北市信義區
+                  </span>
+                </div>
+
+                <p class="fs-5-m fw-bold text-primary mb-7">
+                  NT$
+                  <span class="fw-bold fs-3-m fs-lg-3 text-primary-dark">
+                    1,700
+                  </span>
+                  萬
+                </p>
+
+                <div class="d-flex gap-2">
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >bed</span
+                    >
+                    3
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >shower</span
+                    >
+                    3
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >crop_square</span
+                    >
+                    60坪
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="house-card">
+              <div class="position-relative mb-4">
+                <img
+                  src="/hexschool-frontend-homework/assets/search-house1-1-Cm4HGmVu.png"
+                  alt="天境御邸"
+                  class="rounded-5"
+                />
+
+                <span
+                  class="position-absolute bottom-0 end-0 fw-medium bg-white text-primary-dark rounded-pill px-6 py-1 m-5"
+                >
+                  豪宅
+                </span>
+              </div>
+
+              <div>
+                <div
+                  class="d-flex justify-content-between align-items-center gap-2 mb-4"
+                >
+                  <h3 class="text-dark fs-5-m fs-lg-5 fw-bold mb-0">
+                    天境御邸
+                  </h3>
+
+                  <span class="fs-sm fw-medium d-flex align-items-center">
+                    <span class="material-symbols-outlined fs-6 text-primary">
+                      location_on
+                    </span>
+                    台北市信義區
+                  </span>
+                </div>
+
+                <p class="fs-5-m fw-bold text-primary mb-7">
+                  NT$
+                  <span class="fw-bold fs-3-m fs-lg-3 text-primary-dark">
+                    1,500
+                  </span>
+                  萬
+                </p>
+
+                <div class="d-flex gap-2">
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >bed</span
+                    >
+                    3
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >shower</span
+                    >
+                    2
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >crop_square</span
+                    >
+                    80坪
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="house-card">
+              <div class="position-relative mb-4">
+                <img
+                  src="/hexschool-frontend-homework/assets/search-house4-B0GTZ_f1.png"
+                  alt="御山景苑"
+                  class="rounded-5"
+                />
+
+                <span
+                  class="position-absolute bottom-0 end-0 fw-medium bg-white text-primary-dark rounded-pill px-6 py-1 m-5"
+                >
+                  別墅
+                </span>
+              </div>
+
+              <div>
+                <div
+                  class="d-flex justify-content-between align-items-center gap-2 mb-4"
+                >
+                  <h3 class="text-dark fs-5-m fs-lg-5 fw-bold mb-0">
+                    御山景苑
+                  </h3>
+
+                  <span class="fs-sm fw-medium d-flex align-items-center">
+                    <span class="material-symbols-outlined fs-6 text-primary">
+                      location_on
+                    </span>
+                    台北市信義區
+                  </span>
+                </div>
+
+                <p class="fs-5-m fw-bold text-primary mb-7">
+                  NT$
+                  <span class="fw-bold fs-3-m fs-lg-3 text-primary-dark">
+                    1,200
+                  </span>
+                  萬
+                </p>
+
+                <div class="d-flex gap-2">
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >bed</span
+                    >
+                    3
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >shower</span
+                    >
+                    2
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >crop_square</span
+                    >
+                    85坪
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="house-card">
+              <div class="position-relative mb-4">
+                <img
+                  src="/hexschool-frontend-homework/assets/search-house5-Bz-lN41S.png"
+                  alt="景觀別墅"
+                  class="rounded-5"
+                />
+
+                <span
+                  class="position-absolute bottom-0 end-0 fw-medium bg-white text-primary-dark rounded-pill px-6 py-1 m-5"
+                >
+                  別墅
+                </span>
+              </div>
+
+              <div>
+                <div
+                  class="d-flex justify-content-between align-items-center gap-2 mb-4"
+                >
+                  <h3 class="text-dark fs-5-m fs-lg-5 fw-bold mb-0">
+                    景觀別墅
+                  </h3>
+
+                  <span class="fs-sm fw-medium d-flex align-items-center">
+                    <span class="material-symbols-outlined fs-6 text-primary">
+                      location_on
+                    </span>
+                    台北市信義區
+                  </span>
+                </div>
+
+                <p class="fs-5-m fw-bold text-primary mb-7">
+                  NT$
+                  <span class="fw-bold fs-3-m fs-lg-3 text-primary-dark">
+                    1,150
+                  </span>
+                  萬
+                </p>
+
+                <div class="d-flex gap-2">
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >bed</span
+                    >
+                    3
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >shower</span
+                    >
+                    2
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >crop_square</span
+                    >
+                    70坪
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col">
+            <article class="house-card">
+              <div class="position-relative mb-4">
+                <img
+                  src="/hexschool-frontend-homework/assets/search-house6-qZyizQ9l.png"
+                  alt="山嵐御墅"
+                  class="rounded-5"
+                />
+
+                <span
+                  class="position-absolute bottom-0 end-0 fw-medium bg-white text-primary-dark rounded-pill px-6 py-1 m-5"
+                >
+                  豪宅
+                </span>
+              </div>
+
+              <div>
+                <div
+                  class="d-flex justify-content-between align-items-center gap-2 mb-4"
+                >
+                  <h3 class="text-dark fs-5-m fs-lg-5 fw-bold mb-0">
+                    山嵐御墅
+                  </h3>
+
+                  <span class="fs-sm fw-medium d-flex align-items-center">
+                    <span class="material-symbols-outlined fs-6 text-primary">
+                      location_on
+                    </span>
+                    台北市信義區
+                  </span>
+                </div>
+
+                <p class="fs-5-m fw-bold text-primary mb-7">
+                  NT$
+                  <span class="fw-bold fs-3-m fs-lg-3 text-primary-dark">
+                    1,000
+                  </span>
+                  萬
+                </p>
+
+                <div class="d-flex gap-2">
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >bed</span
+                    >
+                    3
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >shower</span
+                    >
+                    3
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >crop_square</span
+                    >
+                    90坪
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="house-card">
+              <div class="position-relative mb-4">
+                <img
+                  src="/hexschool-frontend-homework/assets/search-house7-DjKDDwuB.png"
+                  alt="巷光宅"
+                  class="rounded-5"
+                />
+
+                <span
+                  class="position-absolute bottom-0 end-0 fw-medium bg-white text-primary-dark rounded-pill px-6 py-1 m-5"
+                >
+                  透天
+                </span>
+              </div>
+
+              <div>
+                <div
+                  class="d-flex justify-content-between align-items-center gap-2 mb-4"
+                >
+                  <h3 class="text-dark fs-5-m fs-lg-5 fw-bold mb-0">巷光宅</h3>
+
+                  <span class="fs-sm fw-medium d-flex align-items-center">
+                    <span class="material-symbols-outlined fs-6 text-primary">
+                      location_on
+                    </span>
+                    台北市信義區
+                  </span>
+                </div>
+
+                <p class="fs-5-m fw-bold text-primary mb-7">
+                  NT$
+                  <span class="fw-bold fs-3-m fs-lg-3 text-primary-dark">
+                    2,000
+                  </span>
+                  萬
+                </p>
+
+                <div class="d-flex gap-2">
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >bed</span
+                    >
+                    3
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >shower</span
+                    >
+                    3
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >crop_square</span
+                    >
+                    75坪
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="house-card">
+              <div class="position-relative mb-4">
+                <img
+                  src="/hexschool-frontend-homework/assets/search-house8-CZzo7Krs.png"
+                  alt="觀山大境"
+                  class="rounded-5"
+                />
+
+                <span
+                  class="position-absolute bottom-0 end-0 fw-medium bg-white text-primary-dark rounded-pill px-6 py-1 m-5"
+                >
+                  豪宅
+                </span>
+              </div>
+
+              <div>
+                <div
+                  class="d-flex justify-content-between align-items-center gap-2 mb-4"
+                >
+                  <h3 class="text-dark fs-5-m fs-lg-5 fw-bold mb-0">
+                    觀山大境
+                  </h3>
+
+                  <span class="fs-sm fw-medium d-flex align-items-center">
+                    <span class="material-symbols-outlined fs-6 text-primary">
+                      location_on
+                    </span>
+                    台北市信義區
+                  </span>
+                </div>
+
+                <p class="fs-5-m fw-bold text-primary mb-7">
+                  NT$
+                  <span class="fw-bold fs-3-m fs-lg-3 text-primary-dark">
+                    2,500
+                  </span>
+                  萬
+                </p>
+
+                <div class="d-flex gap-2">
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >bed</span
+                    >
+                    3
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >shower</span
+                    >
+                    2
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >crop_square</span
+                    >
+                    100坪
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col">
+            <article class="house-card">
+              <div class="position-relative mb-4">
+                <img
+                  src="/hexschool-frontend-homework/assets/search-house9-CiqMWYyL.png"
+                  alt="現代豪華公寓"
+                  class="rounded-5"
+                />
+
+                <span
+                  class="position-absolute bottom-0 end-0 fw-medium bg-white text-primary-dark rounded-pill px-6 py-1 m-5"
+                >
+                  公寓
+                </span>
+              </div>
+
+              <div>
+                <div
+                  class="d-flex justify-content-between align-items-center gap-2 mb-4"
+                >
+                  <h3 class="text-dark fs-5-m fs-lg-5 fw-bold mb-0">
+                    現代豪華公寓
+                  </h3>
+
+                  <span class="fs-sm fw-medium d-flex align-items-center">
+                    <span class="material-symbols-outlined fs-6 text-primary">
+                      location_on
+                    </span>
+                    台北市信義區
+                  </span>
+                </div>
+
+                <p class="fs-5-m fw-bold text-primary mb-7">
+                  NT$
+                  <span class="fw-bold fs-3-m fs-lg-3 text-primary-dark">
+                    1,500
+                  </span>
+                  萬
+                </p>
+
+                <div class="d-flex gap-2">
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >bed</span
+                    >
+                    3
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >shower</span
+                    >
+                    2
+                  </span>
+
+                  <span
+                    class="rounded-pill border border-primary-light py-2 px-5 text-primary-dark fw-bold d-flex align-items-center gap-2"
+                  >
+                    <span class="material-symbols-outlined text-primary fs-5"
+                      >crop_square</span
+                    >
+                    45坪
+                  </span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- 分頁 -->
+        <nav>
+          <ul
+            class="pagination justify-content-center align-items-center gap-5 mb-0"
+          >
+            <li class="page-item">
+              <a
+                class="page-link pagination-arrow"
+                href="#"
+                aria-label="上一頁"
+              >
+                <span class="material-symbols-outlined">chevron_left</span>
+              </a>
+            </li>
+
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link" href="#">2</a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link" href="#">3</a>
+            </li>
+
+            <li class="page-item disabled">
+              <span class="page-link">...</span>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link" href="#">10</a>
+            </li>
+
+            <li class="page-item">
+              <a
+                class="page-link pagination-arrow"
+                href="#"
+                aria-label="下一頁"
+              >
+                <span class="material-symbols-outlined">chevron_right</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+    </main>
+
+    <footer class="footer">
+  <div class="container footer-inner">
+    <!-- 左側：品牌 -->
+    <div class="footer-brand">
+      <a href="#" class="d-inline-block mb-7 mb-lg-0">
+        <img
+          src="data:image/png;base64,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"
+          alt="logo"
+          class="footer-logo mb-10 mb-lg-0"
+        />
+      </a>
+      <p class="footer-copy fs-sm fw-medium text-white mb-0 d-none d-lg-block">
+        copyright © 2026 ISHIMA 房地產/找房平台 All Rights Reserved.
+      </p>
+    </div>
+
+    <!-- 右側：導覽＋社群 -->
+    <div class="footer-content d-flex flex-column mx-2 mx-lg-0">
+      <nav
+        class="footer-nav fs-6-m fw-bold lh-1 text-white text-lg-primary-dark mb-11 mb-lg-0"
+      >
+        <a href="#">好房查詢</a>
+        <a href="#">房貸試算</a>
+        <a href="#">隱私權政策</a>
+        <a href="#">常見問題</a>
+      </nav>
+
+      <div class="footer-social d-flex gap-5 mb-7 mb-lg-0">
+        <a href="#" aria-label="Instagram">
+          <i class="bi bi-instagram text-white text-lg-primary fs-1-m"></i>
+        </a>
+
+        <a href="#" aria-label="Facebook">
+          <i class="bi bi-facebook text-white text-lg-primary fs-1-m"></i>
+        </a>
+      </div>
+
+      <p class="footer-copy fs-sm fw-medium text-white mb-0 d-lg-none">
+        copyright © 2026 ISHIMA 房地產/找房平台 All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>
