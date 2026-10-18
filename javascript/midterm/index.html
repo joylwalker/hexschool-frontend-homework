@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>期中試煉｜旅遊票券篩選器</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section class="ticket-form-section">
+          <div class="ticket-form-layout">
+            <div class="ticket-form-banner">
+              <img
+                class="ticket-form-image"
+                src="./src/assets/img/main_img.png"
+                alt=""
+              />
+              <img
+                class="ticket-form-logo"
+                src="./src/assets/img/logo.png"
+                alt="Logo"
+              />
+            </div>
+
+            <form class="ticket-form">
+              <h2 class="ticket-form-title">
+                <span class="material-symbols-outlined">add_circle</span
+                >新增旅遊套票
+              </h2>
+
+              <div class="form-group">
+                <label for="ticketName" class="form-label">套票名稱</label>
+                <input
+                  type="text"
+                  id="ticketName"
+                  placeholder="請填寫套票名稱"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ticketImage" class="form-label">圖片網址</label>
+                <input
+                  type="url"
+                  id="ticketImage"
+                  placeholder="請填寫圖片網址"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ticketArea" class="form-label">景點地區</label>
+                <div class="select-wrapper">
+                  <select id="ticketArea">
+                    <option value="" disabled selected>請選擇景點地區</option>
+                    <option value="台北">台北</option>
+                    <option value="台中">台中</option>
+                    <option value="南投">南投</option>
+                    <option value="高雄">高雄</option>
+                    <option value="台東">台東</option>
+                  </select>
+
+                  <span class="material-symbols-outlined"> unfold_more </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="ticketPrice" class="form-label">套票金額</label>
+                <input
+                  type="number"
+                  id="ticketPrice"
+                  placeholder="請填寫套票金額"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ticketGroup" class="form-label">套票組數</label>
+                <input
+                  type="number"
+                  id="ticketGroup"
+                  min="0"
+                  step="1"
+                  placeholder="請填寫套票組數"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ticketRate" class="form-label">套票星級</label>
+                <input
+                  type="number"
+                  id="ticketRate"
+                  min="1"
+                  max="10"
+                  step="any"
+                  placeholder="請填寫套票星級"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ticketDescription" class="form-label"
+                  >套票描述</label
+                >
+                <textarea
+                  id="ticketDescription"
+                  maxlength="100"
+                  placeholder="請填寫套票描述（限 100 字）"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="ticket-form-btn">新增套票</button>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      <section class="ticket-list-section">
+        <div class="container">
+          <div class="ticket-filter">
+            <div class="filter-select-wrapper">
+              <select class="areaFilter" aria-label="篩選景點地區">
+                <option value="" disabled selected>地區搜尋</option>
+                <option value="全部地區">全部地區</option>
+                <option value="台北">台北</option>
+                <option value="台中">台中</option>
+                <option value="南投">南投</option>
+                <option value="高雄">高雄</option>
+                <option value="台東">台東</option>
+              </select>
+
+              <span class="material-symbols-outlined" aria-hidden="true">
+                unfold_more
+              </span>
+            </div>
+
+            <p class="ticket-result-count">
+              本次搜尋共 <span class="ticketCount">0</span> 筆資料
+            </p>
+          </div>
+
+          <div class="ticket-list">
+            <!-- 試做版 -->
+            <!-- 第一階段：使用 HTML 手動建立票券卡片，完成版型。 -->
+            <!-- 第二階段：改用 JavaScript forEach() 和模板字串動態渲染。 -->
+            <!-- <div class="ticket-card">
+              <div class="ticket-card-image">
+                <img src="./assets/img/travel_1.png" alt="景點圖片" />
+                <span class="ticket-area">台東</span>
+                <span class="ticket-rate">8.6</span>
+              </div>
+
+              <div class="ticket-card-body">
+                <h3 class="ticket-card-title">綠島自由行套裝行程</h3>
+                <p class="ticket-card-description">
+                  嚴選超高CP值綠島自由行套裝行程，多種綠島套裝組合，提供台東綠島來回船票、綠島環島機車、綠島民宿住宿，行程加贈『綠島浮潛體驗』以及『綠島生態導覽』，讓你用輕鬆的綠島套裝自由行，也能深度認識綠島在地文化。
+                </p>
+              </div>
+
+              <div class="ticket-card-footer">
+                <div class="ticket-card-stock">
+                  <span class="material-symbols-outlined"> error </span>
+                  <p class="ticket-card-group">剩下最後 8 組</p>
+                </div>
+
+                <div class="ticket-card-cost">
+                  <span>TWD</span>
+                  <p class="ticket-card-price">$1,280</p>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
