@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>期中試煉｜旅遊票券篩選器</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0..1,0"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section class="ticket-form-section">
+          <div class="ticket-form-layout">
+            <div class="ticket-form-banner">
+              <img
+                class="ticket-form-image"
+                src="./src/assets/img/main_img.png"
+                alt=""
+              />
+              <img
+                class="ticket-form-logo"
+                src="./src/assets/img/logo.png"
+                alt="Logo"
+              />
+            </div>
+
+            <form class="ticket-form">
+              <h2 class="ticket-form-title">
+                <span class="material-symbols-outlined">add_circle</span
+                >新增旅遊套票
+              </h2>
+
+              <div class="form-group">
+                <label for="ticketName" class="form-label">套票名稱</label>
+                <input
+                  type="text"
+                  id="ticketName"
+                  placeholder="請填寫套票名稱"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ticketImage" class="form-label">圖片網址</label>
+                <input
+                  type="url"
+                  id="ticketImage"
+                  placeholder="請填寫圖片網址"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ticketArea" class="form-label">景點地區</label>
+                <div class="select-wrapper">
+                  <select id="ticketArea">
+                    <option value="" disabled selected>請選擇景點地區</option>
+                    <option value="台北">台北</option>
+                    <option value="台中">台中</option>
+                    <option value="南投">南投</option>
+                    <option value="高雄">高雄</option>
+                    <option value="台東">台東</option>
+                  </select>
+
+                  <span class="material-symbols-outlined"> unfold_more </span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="ticketPrice" class="form-label">套票金額</label>
+                <input
+                  type="number"
+                  id="ticketPrice"
+                  placeholder="請填寫套票金額"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ticketGroup" class="form-label">套票組數</label>
+                <input
+                  type="number"
+                  id="ticketGroup"
+                  min="0"
+                  step="1"
+                  placeholder="請填寫套票組數"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ticketRate" class="form-label">套票星級</label>
+                <input
+                  type="number"
+                  id="ticketRate"
+                  min="1"
+                  max="10"
+                  step="any"
+                  placeholder="請填寫套票星級"
+                />
+              </div>
+              <div class="form-group">
+                <label for="ticketDescription" class="form-label"
+                  >套票描述</label
+                >
+                <textarea
+                  id="ticketDescription"
+                  maxlength="100"
+                  placeholder="請填寫套票描述（限 100 字）"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="ticket-form-btn">新增套票</button>
+            </form>
+          </div>
+        </section>
+      </div>
+
+      <section class="ticket-list-section">
+        <div class="container">
+          <div class="ticket-filter">
+            <div class="filter-select-wrapper">
+              <select class="areaFilter" aria-label="篩選景點地區">
+                <option value="" disabled selected>地區搜尋</option>
+                <option value="全部地區">全部地區</option>
+                <option value="台北">台北</option>
+                <option value="台中">台中</option>
+                <option value="南投">南投</option>
+                <option value="高雄">高雄</option>
+                <option value="台東">台東</option>
+              </select>
+
+              <span class="material-symbols-outlined" aria-hidden="true">
+                unfold_more
+              </span>
+            </div>
+
+            <p class="ticket-result-count">
+              本次搜尋共 <span class="ticketCount">0</span> 筆資料
+            </p>
+          </div>
+
+          <div class="ticket-list"></div>
+          <div class="no-result" hidden>
+            <span class="material-symbols-outlined"> search_off </span>
+            <p>查無此地區的旅遊套票</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
