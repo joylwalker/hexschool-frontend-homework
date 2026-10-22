@@ -1,0 +1,134 @@
+.ticket-form-section {
+  max-width: 1076px;
+  margin: 0 auto;
+  padding-block: 120px;
+}
+
+.ticket-form-layout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: $spacing-24;
+
+  background-color: $neutral-0;
+  padding: 65px 110px 48px;
+  border-radius: 24px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.ticket-form-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-16;
+}
+
+.ticket-form {
+  .ticket-form-title {
+    color: $primary-400;
+    font-size: $spacing-24;
+    font-weight: 700;
+    line-height: 1.2;
+
+    display: flex;
+    align-items: center;
+    gap: $spacing-4;
+
+    padding-bottom: $spacing-4;
+    border-bottom: 3px solid $primary-400;
+    margin-bottom: $spacing-32;
+
+    .material-symbols-outlined {
+      font-size: 24px;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: $spacing-16;
+
+    &:has(+ .ticket-form-btn) {
+      margin-bottom: $spacing-24;
+    }
+
+    .form-label {
+      font-size: 16px;
+      font-weight: 500;
+      color: $primary-400;
+      padding-block: $spacing-8;
+      margin-right: $spacing-24;
+    }
+
+    input,
+    select,
+    textarea {
+      flex: 1;
+      height: $spacing-40;
+      width: 100%;
+      padding: $spacing-8 $spacing-12;
+
+      font-family: inherit;
+      font-size: 16px;
+      line-height: inherit;
+
+      background-color: $background;
+      border: none;
+      border-bottom: 1px solid $primary-400;
+      border-radius: 4px 4px 0 0;
+    }
+
+    input,
+    textarea {
+      &::placeholder {
+        color: $neutral-500;
+        opacity: 1;
+      }
+    }
+
+    textarea {
+      height: 120px;
+      resize: vertical;
+    }
+
+    select {
+      color: $neutral-500;
+
+      option {
+        color: $neutral-600;
+      }
+    }
+
+    .select-wrapper {
+      position: relative;
+      flex: 1;
+
+      select {
+        width: 100%;
+        // 移除 Select 原生箭頭
+        appearance: none;
+      }
+
+      .material-symbols-outlined {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        font-size: 24px;
+        color: $primary-400;
+        pointer-events: none;
+      }
+    }
+  }
+
+  .ticket-form-btn {
+    display: block;
+    margin-left: auto;
+
+    font-size: 20px;
+    color: $neutral-0;
+    background-color: $primary-400;
+    padding: 8px 20px;
+    border-radius: 4px;
+  }
+}
