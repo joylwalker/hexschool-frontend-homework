@@ -26,7 +26,6 @@ function getData() {
     .get(url)
     .then(function (response) {
       data = response.data.data;
-      console.log("取得票券資料", data);
 
       // 更新票券列表
       updateTickets();
@@ -216,18 +215,10 @@ function getChartData() {
     }
   });
 
-  // 2) 轉換成 C3.js 所需格式
-  const newData = [];
-  // Object.keys() 取得物件的所有 Key，並回傳陣列
-  const areas = Object.keys(totalObj);
-
-  // forEach 是陣列方法，所以需要先透過 object.keys() 把物件的屬性名稱整理成陣列
-  areas.forEach(function (area) {
-    // C3.js columns 格式: [["地區", 數量], ...]
-    const arr = [area, totalObj[area]];
-    newData.push(arr);
-  });
-
+  // 2) 將物件轉換成 C3.js 所需格式
+  // C3.js columns 所需格式：[["地區", 數量], ...]
+  // Object.entries()：將物件的每組 Key、Value 轉成 [key, value] 陣列
+  const newData = Object.entries(totalObj);
   return newData;
 }
 
