@@ -1,0 +1,17 @@
+// 瀏覽器重置
+@use "./reset";
+
+// 全站基礎設定
+@use "./base";
+
+// 共用版面
+@use "./layout";
+
+// 共用元件
+@use "./components";
+
+// 前台版面
+@use "./customer";
+
+// 後台版面
+@use "./admin";
