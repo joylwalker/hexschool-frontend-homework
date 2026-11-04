@@ -457,6 +457,55 @@
   max-width: 80px;
 }
 
+// 數量控制器外觀
+.quantityControl {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  background-color: #ffffff;
+  overflow: hidden;
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 32px;
+    height: 36px;
+    padding: 0;
+
+    border: none;
+    background-color: transparent;
+    color: #000000;
+    cursor: pointer;
+
+    font-size: 20px;
+    line-height: 1;
+
+    &:hover:not(:disabled) {
+      background-color: #eeeeee;
+    }
+
+    &:focus-visible {
+      outline: 1px solid #6a33f8;
+      outline-offset: 1px;
+    }
+
+    &:disabled {
+      color: #bdbdbd;
+      background-color: #f7f7f7;
+      cursor: not-allowed;
+    }
+  }
+
+  .quantityValue {
+    min-width: 28px;
+    text-align: center;
+    color: #000000;
+  }
+}
+
 .discardBtn {
   text-align: right;
 }

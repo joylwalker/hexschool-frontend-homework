@@ -13,6 +13,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
   </head>
   <body data-page="admin">
     <nav class="topBar">
@@ -25,8 +29,16 @@
         </ul>
       </div>
     </nav>
-    <section class="wrap">
-      <h2 class="section-title">全品項營收比重</h2>
+    <section class="wrap revenue-section">
+      <h2 class="section-title" id="chartTitle">全產品類別營收比重</h2>
+      <div class="chart-select-wrap">
+        <select id="chartSelect">
+          <option value="category">全產品類別營收比重</option>
+          <option value="product">全品項營收比重</option>
+        </select>
+        <span class="material-symbols-outlined"> keyboard_arrow_down </span>
+      </div>
+
       <div id="chart"></div>
     </section>
     <section class="wrap orderPage-list">
@@ -45,63 +57,8 @@
               <th>操作</th>
             </tr>
           </thead>
-          <tr>
-            <td>10088377474</td>
-            <td>
-              <p>小杰</p>
-              <p>0912345678</p>
-            </td>
-            <td>高雄市前鎮區六合路183巷66號</td>
-            <td>cccexample@gmail.com</td>
-            <td>
-              <p>Louvre 雙人床架</p>
-            </td>
-            <td>2021/03/08</td>
-            <td class="orderStatus">
-              <a href="#">未處理</a>
-            </td>
-            <td>
-              <input type="button" class="delSingleOrder-Btn" value="刪除" />
-            </td>
-          </tr>
-          <tr>
-            <td>10088377475</td>
-            <td>
-              <p>麥特</p>
-              <p>0912345678</p>
-            </td>
-            <td>桃園市平鎮區榮耀路13巷90號</td>
-            <td>wwexample@gmail.com</td>
-            <td>
-              <p>Louvre 雙人床架</p>
-            </td>
-            <td>2021/03/08</td>
-            <td class="orderStatus">
-              <a href="#">已處理</a>
-            </td>
-            <td>
-              <input type="button" class="delSingleOrder-Btn" value="刪除" />
-            </td>
-          </tr>
-          <tr>
-            <td>10088377581</td>
-            <td>
-              <p>歐爾</p>
-              <p>0912345678</p>
-            </td>
-            <td>高雄市苓雅區武廟路22巷188號</td>
-            <td>68example@gmail.com</td>
-            <td>
-              <p>Louvre 雙人床架</p>
-            </td>
-            <td>2021/03/08</td>
-            <td class="orderStatus">
-              <a href="#">未處理</a>
-            </td>
-            <td>
-              <input type="button" class="delSingleOrder-Btn" value="刪除" />
-            </td>
-          </tr>
+
+          <tbody class="orderPage-body"></tbody>
         </table>
       </div>
     </section>
