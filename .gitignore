@@ -1,2 +1,15 @@
-.DS_Store
+# Editor settings
 .vscode/
+
+# Node.js dependencies
+node_modules/
+
+# Vite build output
+dist/
+
+# Sass compiled files
+**/src/scss/*.css
+**/src/scss/*.css.map
+
+# macOS
+.DS_Store
